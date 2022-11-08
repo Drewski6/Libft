@@ -1,3 +1,5 @@
+# _*_ MakeFile _*_
+
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -10,80 +12,103 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft
+# This makefile is going to compile all the .c source files into .o object files
+# Then package them with the archiver "ar" command. 
 
-SRC = isalpha.c\
-	# isdigit.c\
-	# isalnum.c\
-	# isascii.c\
-	# isprint.c\
-	# strlen.c\
-	# memset.c\
-	# bzero.c\
-	# memcpy.c\
-	# memmove.c\
-	# strlcpy.c\
-	# strlcat.c\
-	# toupper.c\
-	# tolower.c\
-	# strchr.c\
-	# strrchr.c\
-	# strncmp.c\
-	# memchr.c\
-	# strnstr.c\
-	# atoi.c\
-	# calloc.c\		# Can use malloc()
-# strdup.c		# Can use malloc()
+NAME = libft.a
+
+SRCS =  ft_isalpha.c \
+        ft_isdigit.c \
+	ft_isalnum.c\
+# ft_isascii.c\
+# ft_isprint.c\
+# ft_strlen.c\
+# ft_memset.c\
+# ft_bzero.c\
+# ft_memcpy.c\
+# ft_memmove.c\
+# ft_strlcpy.c\
+# ft_strlcat.c\
+# ft_toupper.c\
+# ft_tolower.c\
+# ft_strchr.c\
+# ft_strrchr.c\
+# ft_strncmp.c\
+# ft_memchr.c\
+# ft_strnstr.c\
+# ft_atoi.c\
+# ft_calloc.c\		# Can use malloc()
+# ft_strdup.c		# Can use malloc()
+# Not finished. Check part 2.
+
+# Need to look up the syntax here.
+OBJS = ${SRCS:.c=.o}
+
+INCS = libft.h
+
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
+$(NAME): $(OBJS) $(INCS)
+	ar rcs $(NAME) -o $(OBJS)
+
+# Need to look up the syntax here.
+.c.o:
+	gcc ${CFLAGS} -c $< -o ${<:.c=.o}
+
+
+# clean only deletes object files.
 clean:
+	rm -f $(OBJS)
 
-fclean:
+# fclean deletes object files and the binary.
+fclean:	clean
+	rm -f $(NAME)
 
-re:
+# re will delete the object files and binary and then re run all. Fresh start.
+re:	fclean all
 
+# Was coppied makefile to learn from.
 
-# example from rush 02
-
-# NAME = rush-0
-
-# SRC = arithmetic_1000_split_int.c\
-# 	main.c\
-# 	ft_strlen.c\
-# 	ft_putstr.c\
-# 	dict_build.c\
-# 	dict_clean.c\
-# 	print_num_1.c\
-# 	print_num_2.c\
-# 	dict_parse.c
-
-# SRC_FOLDER = srcs/
-
-# HEADERS_FOLDER = includes/
-
-# OBJS = $(patsubst %.c,$(OBJ_FOLDER)%.o,$(SRC))
-
-# OBJ_FOLDER = $(SRC_FOLDER)
-
-# CFLAGS = -Wall -Wextra -Werror -ggdb
-
-# all: $(NAME)
-	
-# $(NAME): $(OBJS)
-# 	 gcc $(CFLAGS) -I$(HEADERS_FOLDER) $(OBJS) -o $(NAME)
-
-# $(OBJ_FOLDER)%.o : $(SRC_FOLDER)%.c
-# 	gcc -c $(CFLAGS) -I$(HEADERS_FOLDER) $< -o $@
-
+# NAME    = libft.a
+# 
+# SRCS    = ft_atoi.c\
+    #   ft_bzero.c\
+    #   ft_calloc.c\
+    #   ft_isalnum.c\
+    #   ft_isalpha.c\
+    #   ft_isascii.c\
+    #   ft_isdigit.c\
+    #   ft_isprint.c\
+    #   ft_strlen.c\
+    #   ft_itoa.c\
+    #   ft_memset.c\
+    #   ft_memcpy.c\
+# 
+# OBJS    = ${SRCS:.c=.o}
+# 
+# INCS    = libft.h
+# 
+# RM     = rm -f
+# 
+# LIB    = ar rcs
+# 
+# GCC    = gcc
+# 
+# CFLAGS    = -Wall -Wextra -Werror
+# 
+# .c.o:
+        # ${GCC} ${CFLAGS} -c $< -o ${<:.c=.o}
+# 
+# $(NAME):    ${OBJS} ${INCS}
+        # ${LIB} ${NAME} ${OBJS}
+# 
+# all:        ${NAME}
+# 
 # clean:
-# ifneq ($(strip $(foreach f,$(OBJS),$(wildcard $(f)))),)
-# 	rm -f $(strip $(foreach f,$(OBJS),$(wildcard $(f))))
-# endif
-
-# fclean: clean
-# ifneq ($(wildcard($(NAME))),)
-# 	rm $(NAME)
-# endif
-
-# re: fclean all
+        # rm -f ${OBJS}
+# 
+# fclean:        clean
+        # rm  -f ${NAME}
+# 

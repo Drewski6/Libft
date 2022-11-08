@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpentlan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 15:11:16 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/07 15:11:19 by dpentlan         ###   ########.fr       */
+/*   Created: 2022/11/07 14:31:39 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/07 14:31:56 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//  header for my libft files.
 
-int	ft_isalpha(char c)
-{
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
-}
+#ifndef LIBFT_H
+#define LIBFT_H
+
+int ft_isalpha(char c);
+int ft_isdigit(char c);
+int ft_isalnum(char c);
+
+#endif
