@@ -21,6 +21,6 @@ int ft_isalnum(char c);
 int ft_isascii(int c);
 int ft_isprint(char c);
 long    ft_strlen(const char* str);
-int ft_memset(void* str, int c, int len);
+void*   ft_memset(void* str, int c, int len);
 
 #endif
