@@ -1,9 +1,0 @@
-memset
-	String before: This is a sample string.
-	sizeof(char)lksjd: 1
-	String after : WWWWWWWWWWsample string.
-
-ft_memset
-	String before: This is a sample string.
-	sizeof(char)lksjd: 1
-	String after : WWWWWWWWWWsample string.

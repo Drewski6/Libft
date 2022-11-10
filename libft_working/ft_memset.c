@@ -12,9 +12,9 @@ parameters:
     int c     : value to replace mem location with. Can be int, but is placed like a char. Need to test ints greater than 127.
     size_t len: Number of bytes to replace in str with c.
 */
-void*   ft_memset(void* str, int c, int len)
+void*   ft_memset(void* str, int c, unsigned int len)
 {
-    int i;
+    unsigned int i;
 
     i = 0;
     while (i < len)
