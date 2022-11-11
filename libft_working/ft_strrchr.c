@@ -1,27 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpentlan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 15:07:07 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/11 15:07:10 by dpentlan         ###   ########.fr       */
+/*   Created: 2022/11/11 17:18:16 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/11 17:18:18 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 
-char*	ft_strchr(const char* s, int c)
-{
-	int	i;
-
-	i = 0;
-	while(s[i] != 0)
-	{
-		if (s[i] == c)
-			return ((char*)&s[i]);
-		i++;
-	}
-	return (0);		// returns null if no match found.
-}

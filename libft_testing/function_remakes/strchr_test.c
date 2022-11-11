@@ -31,7 +31,7 @@ int main (int argc, char* argv[])
 		else
 		{
 			return_val = ft_strchr(string, all_printable[i]);
-			printf("ft_strchr,%c,%s\n", all_printable[i], return_val);
+			printf("strchr,%c,%s\n", all_printable[i], return_val);
 		}
 		i++;
 	}
