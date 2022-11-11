@@ -26,13 +26,13 @@ int main (int argc, char* argv[])
     {
         if (atoi(argv[1]) == 0)
         {
-            return_val = toupper(string_src[i]);
-            printf("toupper,%d,%d,%d,%c,%c\n", string_src[i], return_val, len, string_src[i], return_val);
+            return_val = tolower(string_src[i]);
+            printf("tolower,%d,%d,%d,%c,%c\n", string_src[i], return_val, len, string_src[i], return_val);
         }
         else if (atoi(argv[1]) == 1)
         {
-            return_val = ft_toupper(string_src[i]);
-            printf("toupper,%d,%d,%d,%c,%c\n", string_src[i], return_val, len, string_src[i], return_val);
+            return_val = ft_tolower(string_src[i]);
+            printf("ft_tolower,%d,%d,%d,%c,%c\n", string_src[i], return_val, len, string_src[i], return_val);
         }
         i++;
     }
@@ -42,13 +42,13 @@ int main (int argc, char* argv[])
     {
         if (atoi(argv[1]) == 0)
         {
-            return_val = toupper(string_all_ascii_vals[i]);
-            printf("toupper,%d,%d,%d,%c,%c\n", string_all_ascii_vals[i], return_val, len, string_all_ascii_vals[i], return_val);
+            return_val = tolower(string_all_ascii_vals[i]);
+            printf("tolower,%d,%d,%d,%c,%c\n", string_all_ascii_vals[i], return_val, len, string_all_ascii_vals[i], return_val);
         }
         else if (atoi(argv[1]) == 1)
         {
-            return_val = ft_toupper(string_all_ascii_vals[i]);
-            printf("toupper,%d,%d,%d,%c,%c\n", string_all_ascii_vals[i], return_val, len, string_all_ascii_vals[i], return_val);
+            return_val = ft_tolower(string_all_ascii_vals[i]);
+            printf("ft_tolower,%d,%d,%d,%c,%c\n", string_all_ascii_vals[i], return_val, len, string_all_ascii_vals[i], return_val);
         }
         i++;
     }
