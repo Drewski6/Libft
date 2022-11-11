@@ -1,5 +1,0 @@
-function,action,result
-memcpy,Before memcpy,
-memcpy,After memcpy,This i
-ft_memcpy,Before ft_memcpy,
-ft_memcpy,After ft_memcpy,This i

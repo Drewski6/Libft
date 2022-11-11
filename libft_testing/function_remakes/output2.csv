@@ -1,0 +1,32 @@
+Function,Action,Size,Result,Return_Val
+ft_strlcpy,after,0,,27
+ft_strlcpy,after,1,,27
+ft_strlcpy,after,2,H,27
+ft_strlcpy,after,3,Hi,27
+ft_strlcpy,after,4,Hi ,27
+ft_strlcpy,after,5,Hi t,27
+ft_strlcpy,after,6,Hi th,27
+ft_strlcpy,after,7,Hi thi,27
+ft_strlcpy,after,8,Hi this,27
+ft_strlcpy,after,9,Hi this ,27
+ft_strlcpy,after,10,Hi this i,27
+ft_strlcpy,after,11,Hi this is,27
+ft_strlcpy,after,12,Hi this is ,27
+ft_strlcpy,after,13,Hi this is a,27
+ft_strlcpy,after,14,Hi this is a ,27
+ft_strlcpy,after,15,Hi this is a s,27
+ft_strlcpy,after,16,Hi this is a so,27
+ft_strlcpy,after,17,Hi this is a sou,27
+ft_strlcpy,after,18,Hi this is a sour,27
+ft_strlcpy,after,19,Hi this is a sourc,27
+ft_strlcpy,after,20,Hi this is a source,27
+ft_strlcpy,after,21,Hi this is a source ,27
+ft_strlcpy,after,22,Hi this is a source s,27
+ft_strlcpy,after,23,Hi this is a source st,27
+ft_strlcpy,after,24,Hi this is a source str,27
+ft_strlcpy,after,25,Hi this is a source stri,27
+ft_strlcpy,after,26,Hi this is a source strin,27
+ft_strlcpy,after,27,Hi this is a source string,27
+ft_strlcpy,after,28,Hi this is a source string.,27
+ft_strlcpy,after,29,Hi this is a source string.,27
+ft_strlcpy,after,30,Hi this is a source string.,27
