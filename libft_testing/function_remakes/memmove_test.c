@@ -13,9 +13,9 @@ int main (int argc, char* argv[])
 
     size = atoi(argv[1]);
 
-    printf("memmove,Before memmove,%s\n", string_dest);
+    printf("memmove,Before memmove,%s\r\n", string_dest);
     memmove(string_dest, string_src, size);
-    printf("memmove,After memmove,%s\n", string_dest);
+    printf("memmove,After memmove,%s\r\n", string_dest);
 
     printf("ft_memmove,Before memmove,%s\n", string1_dest);
     ft_memmove(string1_dest, string1_src, size);
