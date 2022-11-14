@@ -33,7 +33,7 @@ SRCS =  ft_isalpha.c \
         ft_strrchr.c \
         ft_memchr.c \
         ft_memcmp.c \
-        # ft_strnstr.c \
+        ft_strnstr.c \
 # Note that i moved strncmp down because it's done on my home machine but not on github. remember to move this up after
 # ft_strncmp.c \
 # ft_atoi.c \
