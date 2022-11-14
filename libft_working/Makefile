@@ -31,13 +31,29 @@ SRCS =  ft_isalpha.c \
         ft_tolower.c \
         ft_strchr.c \
         ft_strrchr.c \
+        ft_memchr.c \
+        ft_memcmp.c
+# Note that i moved strncmp down because it's done on my home machine but not on github. remember to move this up after
 # ft_strncmp.c \
-# ft_memchr.c \
 # ft_strnstr.c \
 # ft_atoi.c \
 # ft_calloc.c \		# Can use malloc()
-# ft_strdup.c		# Can use malloc()
-# Not finished. Check part 2.
+# ft_strdup.c \		# Can use malloc()
+
+# AFTER THIS IS PART II
+
+# ft_substr.c \ 
+# ft_strjoin.c \ 
+# ft_strtrim.c \ 
+# ft_split.c \ 
+# ft_itoa.c \ 
+# ft_strmapi.c \ 
+# ft_striteri.c \ 
+# ft_putchar_fd.c \ 
+# ft_putstr_fd.c \ 
+# ft_putendl_fd.c \ 
+# ft_putnbr_fd.c \ 
+# Not finished. Check Bonus.
 
 # Need to look up the syntax here.
 OBJS = ${SRCS:.c=.o}
