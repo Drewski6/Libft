@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-void	ft_bzero(void *str, unsigned int len)
+void	ft_bzero(void *str, size_t len)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < len)
