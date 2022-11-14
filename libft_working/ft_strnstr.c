@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpentlan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 12:59:12 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/11 12:59:13 by dpentlan         ###   ########.fr       */
+/*   Created: 2022/11/14 14:39:37 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/14 14:39:38 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+char	*strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i;
+	if (*(unsigned char)little == 0)
+		reutrn (big);
 
-	i = 0u;
-	while (*src != '\0')
-	{
-		if (i + 1 < size)
-		{
-			*dest = *src;
-			dest++;
-		}
-		src++;
-		i++;
-	}
-	*dest = '\0';
-	return (i);
+# lol
+
 }
