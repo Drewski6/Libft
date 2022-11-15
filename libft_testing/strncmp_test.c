@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "../libft/libft.h"
 
-int main (void)
+int main (int argc, char *argv[])
 {
 	int n;
 	int	return_val_1;
@@ -17,13 +17,13 @@ int main (void)
 	{
 		n = atoi(argv[4]);
 		return_val_1 = strncmp(argv[2], argv[3], n);
-		printf("strncmp,%s,%s,%ld,%d\n", argv[2], argv[3], n,return_val_1);
+		printf("strncmp,%s,%s,%d,%d\n", argv[2], argv[3], n,return_val_1);
 	}
 	else if (atoi(argv[1]) == 2)
 	{
 		n = atoi(argv[4]);
 		return_val_2 = ft_strncmp(argv[2], argv[3], n);
-		printf("ft_strncmp,%s,%s,%ld,%d\n", argv[2], argv[3], n,return_val_2);
+		printf("strncmp,%s,%s,%d,%d\n", argv[2], argv[3], n,return_val_2);
 	}
 
 	return (0);
