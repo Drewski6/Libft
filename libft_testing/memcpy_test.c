@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../../libft_working/libft.h"
+#include "../libft/libft.h"
 #define SIZE 6
 
 int main (void)

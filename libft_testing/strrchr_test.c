@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../../libft_working/libft.h"
+#include "../libft/libft.h"
 
 //	a.out takes 2 arguments. 
 //	First is 0 or 1 which indicates which function to use (original or 42)

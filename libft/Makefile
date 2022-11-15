@@ -31,17 +31,11 @@ SRCS =  ft_isalpha.c \
         ft_tolower.c \
         ft_strchr.c \
         ft_strrchr.c \
-<<<<<<< HEAD
-        ft_strncmp.c \
-# ft_memchr.c \
-# ft_strnstr.c \
-=======
         ft_memchr.c \
         ft_memcmp.c \
         ft_strnstr.c \
 # Note that i moved strncmp down because it's done on my home machine but not on github. remember to move this up after
 # ft_strncmp.c \
->>>>>>> fee05edada0cbdca23e3f6669176f3b644f05d63
 # ft_atoi.c \
 # ft_calloc.c \		# Can use malloc()
 # ft_strdup.c \		# Can use malloc()

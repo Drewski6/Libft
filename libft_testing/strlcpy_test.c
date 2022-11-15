@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <bsd/string.h>
-#include "../../libft_working/libft.h"
+#include "../libft/libft.h"
 
 int main (int argc, char* argv[])
 {
