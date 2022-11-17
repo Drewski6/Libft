@@ -37,7 +37,7 @@ SRCS =  ft_isalpha.c \
         ft_strnstr.c \
         ft_atoi.c \
         ft_calloc.c \
-# ft_strdup.c \		# Can use malloc()
+        ft_strdup.c \
 
 # AFTER THIS IS PART II
 
