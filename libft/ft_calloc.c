@@ -17,10 +17,12 @@ void	*ft_calloc(size_t num_elem, size_t elem_size)
 	register void	*ptr;
 
 	if (num_elem == 0 || elem_size == 0)
-		num_elem = elem_size = 1;
-	
+	{
+		num_elem = 1;
+		elem_size = 1;
+	}
 	ptr = malloc(num_elem * elem_size);
-	if (ptr) ft_bzero (ptr, num_elem * elem_size);
-
+	if (ptr)
+		ft_bzero (ptr, num_elem * elem_size);
 	return (ptr);
 }
