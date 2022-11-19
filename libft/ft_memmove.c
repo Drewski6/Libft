@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
@@ -23,7 +22,6 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 		while (i < len)
 		{
 			*(char *)(dest + i) = *(char *)(src + i);
-			printf("in first loop, i = %ld\n", i);
 			i++;
 		}
 	}
@@ -31,8 +29,7 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	{
 		while (i < len)
 		{
-			*(char *)(dest + (len - i)) = *(char *)(src + (len - i));
-			printf("in second loop, i = %ld\n", i);
+			*(char *)(dest + (len - 1 - i)) = *(char *)(src + (len - 1 - i));
 			i++;
 		}
 	}
