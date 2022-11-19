@@ -15,11 +15,24 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
+	size_t	s_len;
 
-	ptr = (char *)malloc((len + 1) * sizeof(char));
-	if (ptr)
+	if (start > ft_strlen(s))
+		s_len = 0;
+	else
+		s_len = ft_strlen((char *)s + start);
+	if (s_len < len)
+	{
+		ptr = (char *)malloc((s_len + 1) * sizeof(char));
+		ft_bzero(ptr, (s_len + 1));
+		if (s_len > 0)
+			ft_strlcpy(ptr, (char *)s + start, s_len + 1);
+	}
+	else
+	{
+		ptr = (char *)malloc((len + 1) * sizeof(char));
 		ft_bzero(ptr, (len + 1));
-	if (ptr)
-		ft_strlcpy(ptr, (char *)s + start, (len + 1));
+		ft_strlcpy(ptr, (char *)s + start, len + 1);
+	}
 	return (ptr);
 }
