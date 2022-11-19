@@ -35,7 +35,7 @@ int	ft_atoi(const char *nptr)
 	while (*nptr == 32 || *nptr == '\f' || *nptr == '\n'
 		|| *nptr == '\r' || *nptr == '\t' || *nptr == '\v')
 		nptr++;
-	while (*nptr == '-' || *nptr == 43)
+	if (*nptr == '-' || *nptr == 43)
 	{
 		if (*nptr == '-')
 			mult *= -1;
