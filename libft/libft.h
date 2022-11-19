@@ -16,6 +16,7 @@
 #define LIBFT_H
 # include <stddef.h>
 # include <stdlib.h>
+# include <stdint.h>
 
 int ft_isalpha(char c);
 int ft_isdigit(char c);
