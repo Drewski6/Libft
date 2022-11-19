@@ -16,9 +16,15 @@
 char **ft_split(char const *s, char c)
 {
 	size_t	s_len;
+	size_t i;
 
+	i = 0U;
 	s_len = ft_strlen((char *)s);
 	printf("strlen(s):%ld, c: %c\n", s_len, c);
-	//while ()	
+	while (i < s_len)
+	{
+		if (s[i] == c)
+
+	}
 	return (0);
 }
