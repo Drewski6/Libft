@@ -24,15 +24,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s_len < len)
 	{
 		ptr = (char *)malloc((s_len + 1) * sizeof(char));
-		ft_bzero(ptr, (s_len + 1));
-		if (s_len > 0)
+		if (ptr)
+			ft_bzero(ptr, (s_len + 1));
+		if (s_len > 0 && ptr)
 			ft_strlcpy(ptr, (char *)s + start, s_len + 1);
 	}
 	else
 	{
 		ptr = (char *)malloc((len + 1) * sizeof(char));
-		ft_bzero(ptr, (len + 1));
-		ft_strlcpy(ptr, (char *)s + start, len + 1);
+		if (ptr)
+			ft_bzero(ptr, (len + 1));
+		if (ptr)
+			ft_strlcpy(ptr, (char *)s + start, len + 1);
 	}
 	return (ptr);
 }
