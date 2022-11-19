@@ -11,9 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char **ft_split(char const *s, char c)
 {
+	size_t	s_len;
 
-
+	s_len = ft_strlen((char *)s);
+	printf("strlen(s):%ld, c: %c\n", s_len, c);
+	//while ()	
+	return (0);
 }
