@@ -63,6 +63,10 @@ all: $(NAME)
 $(NAME): $(OBJS) $(INCS)
 	ar rcs $(NAME) -o $(OBJS)
 
+so:
+	gcc -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
+
 # Need to look up the syntax here.
 .c.o:
 	gcc ${CFLAGS} -c $< -o ${<:.c=.o}

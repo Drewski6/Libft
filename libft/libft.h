@@ -18,11 +18,11 @@
 # include <stdlib.h>
 # include <stdint.h>
 
-int ft_isalpha(char c);
-int ft_isdigit(char c);
+int ft_isalpha(int c);
+int ft_isdigit(int c);
 int ft_isalnum(char c);
 int ft_isascii(int c);
-int ft_isprint(char c);
+int ft_isprint(int c);
 long    ft_strlen(const char *str);
 void*   ft_memset(void *str, int c, size_t len);
 void    ft_bzero(void *str, size_t len);

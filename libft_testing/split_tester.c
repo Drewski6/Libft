@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-//#include <stdio.h>
-//#include <stdlib.h>			//remove with libft
-//#include "../libft/libft.h"	//remove with libft
+//#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>			//remove with libft
+#include "../libft/libft.h"	//remove with libft
 
 
 
@@ -57,8 +57,6 @@ char **ft_split(char const *s, char c)
 
 	array = 0;
 	word_count = 0;
-	if (s == 0 || c == 0)
-		return (0);
 	word_count = get_word_count((char *)s, c);
 	array = (char **)malloc((word_count + 1) * sizeof(char *));
 	if (array == 0)
@@ -66,6 +64,9 @@ char **ft_split(char const *s, char c)
 	ft_bzero(array, (size_t)(word_count + 1));
 	i = 0;
 	array_index = 0;
+	if (s == 0)
+		return (0);
+		
 	while (s[i])
 	{
 		word_len = 0;
@@ -89,5 +90,20 @@ char **ft_split(char const *s, char c)
 		}
 		i++;
 	}
+	printf("Word count: %d\n", word_count);
 	return (array);
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include "../libft/libft.h"
+
+int main (int argc, char *argv[])
+{
+	char string[] = "This be my input string";
+	char	**split_array;
+
+	split_array = ft_split(string, ' ');
+	free(split_array);
+
+	return (0);
 }

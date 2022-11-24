@@ -4,9 +4,23 @@
 
 int main (int argc, char *argv[])
 {
-	char string[] = "This is my input string.";
+	char	**split_array;
+	int		return_len;
+	int		i;
 
-	ft_split(string, 's');
+	i = 0;
+	return_len = 0;
+	split_array = ft_split(argv[1], argv[2][0]);
+	while (split_array[return_len])
+		return_len++;
+	printf("Return is: ");
+	while (i < return_len)
+	{
+		printf("%s,", split_array[i]);
+		i++;
+	}
+	printf("\n");
+	free(split_array);
 
 	return (0);
 }
