@@ -14,8 +14,8 @@
 
 int	get_word_count(char *s, char c)
 {
-	int word_count;
-	int i;
+	int	word_count;
+	int	i;
 
 	i = 0;
 	word_count = 0;
@@ -42,14 +42,53 @@ int	free_all(char **array, int fail_index)
 	return (0);
 }
 
-char **ft_split(char const *s, char c)
+int	add_word(char **array, int *array_index, int word_len, int start, char *s)
+{
+	array[*array_index] = ft_substr(s, start, word_len);
+	if (array[*array_index] == 0)
+	{
+		free_all(array, *array_index);
+		array = 0;
+		return (0);
+	}
+	*array_index += 1;
+	return (1);
+}
+
+int	fill_array(char **array, char *s, char c)
+{
+	int		i;
+	int		array_index;
+	int		word_len;
+	int		start;
+
+	i = 0;
+	array_index = 0;
+	while (s[i])
+	{
+		word_len = 0;
+		start = 0;
+		if (s[i] != c)
+			start = i;
+		while (s[i] != c && s[i] != 0)
+		{
+			word_len++;
+			i++;
+		}
+		if (word_len)
+		{
+			if (!add_word(array, &array_index, word_len, start, s))
+				return (0);
+		}
+		i++;
+	}
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
 {
 	int		word_count;
-	char 	**array;
-	int		i;
-	int		word_len;
-	int		array_index;
-	int 	start;
+	char	**array;
 
 	array = 0;
 	word_count = 0;
@@ -59,31 +98,7 @@ char **ft_split(char const *s, char c)
 	array = (char **)ft_calloc(1, (word_count + 1) * sizeof(char *));
 	if (array == 0)
 		return (0);
-	i = 0;
-	array_index = 0;
-	while (s[i])
-	{
-		word_len = 0;
-		start = 0;
-		if (s[i] != c) 
-			start = i;
-		while (s[i] != c && s[i] != 0)
-		{
-			word_len++;	
-			i++;
-		}
-		if (word_len)
-		{
-			array[array_index] = ft_substr(s, start, word_len);
-			if (array[array_index] == 0)
-			{
-				free_all(array, array_index);
-				array = 0;
-				return (0);
-			}
-			array_index++;
-		}
-		i++;
-	}
+	if (!fill_array(array, (char *)s, c))
+		return (0);
 	return (array);
 }
