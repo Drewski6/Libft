@@ -184,3 +184,148 @@ $18 = (char **) 0x5555555592a0
 0x5555555592a0:	0x555592e0	0x5555	0x55559300	0x5555
 0x5555555592b0:	0x0	0x0	0x0
 0x555592e0:	Cannot access memory at address 0x555592e0
+Reading symbols from a.out...
+Temporary breakpoint 1 at 0x117c: file split_test.c, line 11.
+Starting program: /home/drew/Documents/ecole_42/libft/libft_testing/a.out 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=1, argv=0x7fffffffdbb8) at split_test.c:11
+ft_split (s=0x555555556004 "  tripouille  42  ", c=32 ' ') at ft_split.c:95
+Reading symbols from a.out...
+Remote debugging using | /usr/bin/vgdb --pid=113325
+relaying data between gdb and process 113325
+warning: remote target does not support file transfer, attempting to access files from local filesystem.
+Reading symbols from /lib64/ld-linux-x86-64.so.2...
+Reading symbols from /usr/lib/debug/.build-id/61/ef896a699bb1c2e4e231642b2e1688b2f1a61e.debug...
+0x00000000040202b0 in _start () from /lib64/ld-linux-x86-64.so.2
+Breakpoint 1 at 0x10917c: file split_test.c, line 11.
+Continuing.
+
+Breakpoint 1, main (argc=1, argv=0x1ffefffb98) at split_test.c:11
+ft_split (s=0x10a004 "  tripouille  42  ", c=32 ' ') at ft_split.c:95
+$1 = 2
+$2 = 0x10a004 "  tripouille  42  "
+fill_array (array=0x4a99040, s=0x10a004 "  tripouille  42  ", c=32 ' ') at ft_split.c:68
+add_word (array=0x4a99040, word_len=10, start=2, s=0x10a004 "  tripouille  42  ") at ft_split.c:49
+fill_array (array=0x4a99040, s=0x10a004 "  tripouille  42  ", c=32 ' ') at ft_split.c:82
+$3 = (char **) 0x4a99040
+0x4a99040:	-96 '\240'	-112 '\220'	-87 '\251'
+0x4a99043:	0x4	0x0	0x0
+$4 = 0x4a990a0 "tripouille"
+$5 = 0x0
+$6 = 0x0
+$7 = 0x0
+$8 = 0x0
+$9 = 0x4a990f0 "42"
+ft_split (s=0x10a004 "  tripouille  42  ", c=32 ' ') at ft_split.c:103
+main (argc=1, argv=0x1ffefffb98) at split_test.c:26
+__libc_start_call_main (main=main@entry=0x109169 <main>, argc=argc@entry=1, argv=argv@entry=0x1ffefffb98) at ../sysdeps/nptl/libc_start_call_main.h:74
+Reading symbols from ./a.out...
+Remote debugging using | /usr/bin/vgdb
+vgdb error: no FIFO found and no pid given
+Remote communication error.  Target disconnected.: Connection reset by peer.
+Remote debugging using | /usr/bin/vgdb --pid=113325
+vgdb error: no FIFO found matching pid 113325
+Remote communication error.  Target disconnected.: Connection reset by peer.
+Remote debugging using | /usr/bin/vgdb --pid=113325
+vgdb error: no FIFO found matching pid 113325
+Remote communication error.  Target disconnected.: Connection reset by peer.
+Remote debugging using | /usr/bin/vgdb --pid=113615
+relaying data between gdb and process 113615
+warning: remote target does not support file transfer, attempting to access files from local filesystem.
+Reading symbols from /lib64/ld-linux-x86-64.so.2...
+Reading symbols from /usr/lib/debug/.build-id/61/ef896a699bb1c2e4e231642b2e1688b2f1a61e.debug...
+0x00000000040202b0 in _start () from /lib64/ld-linux-x86-64.so.2
+The "remote" target does not support "run".  Try "help target" or "continue".
+Continuing.
+[Inferior 1 (Remote target) exited normally]
+Reading symbols from ./a.out...
+Remote debugging using | /usr/bin/vgdb --pid=113801
+relaying data between gdb and process 113801
+warning: remote target does not support file transfer, attempting to access files from local filesystem.
+Reading symbols from /lib64/ld-linux-x86-64.so.2...
+Reading symbols from /usr/lib/debug/.build-id/61/ef896a699bb1c2e4e231642b2e1688b2f1a61e.debug...
+0x00000000040202b0 in _start () from /lib64/ld-linux-x86-64.so.2
+Continuing.
+[Inferior 1 (Remote target) exited normally]
+Reading symbols from ./a.out...
+Remote debugging using | /usr/bin/vgdb --pid=114635
+relaying data between gdb and process 114635
+warning: remote target does not support file transfer, attempting to access files from local filesystem.
+Reading symbols from /lib64/ld-linux-x86-64.so.2...
+Reading symbols from /usr/lib/debug/.build-id/61/ef896a699bb1c2e4e231642b2e1688b2f1a61e.debug...
+0x00000000040202b0 in _start () from /lib64/ld-linux-x86-64.so.2
+Breakpoint 1 at 0x10917c: file split_test.c, line 11.
+The "remote" target does not support "run".  Try "help target" or "continue".
+Continuing.
+
+Breakpoint 1, main (argc=1, argv=0x1ffefffb98) at split_test.c:11
+ft_split (s=0x10a004 "tripouille", c=0 '\000') at ft_split.c:95
+main (argc=1, argv=0x1ffefffb98) at split_test.c:26
+Reading symbols from ./a.out...
+Remote debugging using | /usr/bin/vgdb --pid=115557
+relaying data between gdb and process 115557
+warning: remote target does not support file transfer, attempting to access files from local filesystem.
+Reading symbols from /lib64/ld-linux-x86-64.so.2...
+Reading symbols from /usr/lib/debug/.build-id/61/ef896a699bb1c2e4e231642b2e1688b2f1a61e.debug...
+0x00000000040202b0 in _start () from /lib64/ld-linux-x86-64.so.2
+Breakpoint 1 at 0x10917c: file split_test.c, line 11.
+Continuing.
+
+Breakpoint 1, main (argc=1, argv=0x1ffefffb98) at split_test.c:11
+__libc_start_call_main (main=main@entry=0x109169 <main>, argc=argc@entry=1, argv=argv@entry=0x1ffefffb98) at ../sysdeps/nptl/libc_start_call_main.h:74
+[Inferior 1 (Remote target) exited normally]
+Reading symbols from ./a.out...
+Remote debugging using | /usr/bin/vgdb --pid=115785
+relaying data between gdb and process 115785
+warning: remote target does not support file transfer, attempting to access files from local filesystem.
+Reading symbols from /lib64/ld-linux-x86-64.so.2...
+Reading symbols from /usr/lib/debug/.build-id/61/ef896a699bb1c2e4e231642b2e1688b2f1a61e.debug...
+0x00000000040202b0 in _start () from /lib64/ld-linux-x86-64.so.2
+Breakpoint 1 at 0x10917c: file split_test.c, line 11.
+Continuing.
+
+Breakpoint 1, main (argc=1, argv=0x1ffefffb98) at split_test.c:11
+__libc_start_call_main (main=main@entry=0x109169 <main>, argc=argc@entry=1, argv=argv@entry=0x1ffefffb98) at ../sysdeps/nptl/libc_start_call_main.h:74
+[Inferior 1 (Remote target) exited normally]
+Undefined command: "ecit".  Try "help".
+Reading symbols from ./a.out...
+Remote debugging using | /usr/bin/vgdb --pid=116339
+relaying data between gdb and process 116339
+warning: remote target does not support file transfer, attempting to access files from local filesystem.
+Reading symbols from /lib64/ld-linux-x86-64.so.2...
+Reading symbols from /usr/lib/debug/.build-id/61/ef896a699bb1c2e4e231642b2e1688b2f1a61e.debug...
+0x00000000040202b0 in _start () from /lib64/ld-linux-x86-64.so.2
+Breakpoint 1 at 0x10917c: file split_test.c, line 11.
+Continuing.
+
+Breakpoint 1, main (argc=1, argv=0x1ffefffb98) at split_test.c:11
+__libc_start_call_main (main=main@entry=0x109169 <main>, argc=argc@entry=1, argv=argv@entry=0x1ffefffb98) at ../sysdeps/nptl/libc_start_call_main.h:74
+Reading symbols from ./a.out...
+Remote debugging using | /usr/bin/vgdb --pid=116478
+relaying data between gdb and process 116478
+warning: remote target does not support file transfer, attempting to access files from local filesystem.
+Reading symbols from /lib64/ld-linux-x86-64.so.2...
+Reading symbols from /usr/lib/debug/.build-id/61/ef896a699bb1c2e4e231642b2e1688b2f1a61e.debug...
+0x00000000040202b0 in _start () from /lib64/ld-linux-x86-64.so.2
+Breakpoint 1 at 0x10917c: file split_test.c, line 11.
+Continuing.
+
+Breakpoint 1, main (argc=1, argv=0x1ffefffb98) at split_test.c:11
+__libc_start_call_main (main=main@entry=0x109169 <main>, argc=argc@entry=1, argv=argv@entry=0x1ffefffb98) at ../sysdeps/nptl/libc_start_call_main.h:74
+[Inferior 1 (Remote target) exited normally]
+Reading symbols from ./a.out...
+/usr/bin/vgdb --pid=116553: No such file or directory.
+Remote debugging using | /usr/bin/vgdb --pid=116553
+relaying data between gdb and process 116553
+warning: remote target does not support file transfer, attempting to access files from local filesystem.
+Reading symbols from /lib64/ld-linux-x86-64.so.2...
+Reading symbols from /usr/lib/debug/.build-id/61/ef896a699bb1c2e4e231642b2e1688b2f1a61e.debug...
+0x00000000040202b0 in _start () from /lib64/ld-linux-x86-64.so.2
+Breakpoint 1 at 0x10917c: file split_test.c, line 11.
+Continuing.
+
+Breakpoint 1, main (argc=1, argv=0x1ffefffb98) at split_test.c:11
+__libc_start_call_main (main=main@entry=0x109169 <main>, argc=argc@entry=1, argv=argv@entry=0x1ffefffb98) at ../sysdeps/nptl/libc_start_call_main.h:74
+[Inferior 1 (Remote target) exited normally]

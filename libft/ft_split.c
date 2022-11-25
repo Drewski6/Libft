@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	get_word_count(char *s, char c)
 {
@@ -42,28 +43,30 @@ int	free_all(char **array, int fail_index)
 	return (0);
 }
 
-int	add_word(char **array, int *array_index, int word_len, int start, char *s)
+int	add_word(char **array, int word_len, int start, char *s)
 {
-	array[*array_index] = ft_substr(s, start, word_len);
-	if (array[*array_index] == 0)
+	int	i;
+
+	i = 0;
+	while (array[i])
+		i++;
+	array[i] = ft_substr(s, start, word_len);
+	if (array[i] == 0)
 	{
-		free_all(array, *array_index);
+		free_all(array, i);
 		array = 0;
 		return (0);
 	}
-	*array_index += 1;
 	return (1);
 }
 
 int	fill_array(char **array, char *s, char c)
 {
 	int		i;
-	int		array_index;
 	int		word_len;
 	int		start;
 
 	i = 0;
-	array_index = 0;
 	while (s[i])
 	{
 		word_len = 0;
@@ -77,7 +80,7 @@ int	fill_array(char **array, char *s, char c)
 		}
 		if (word_len)
 		{
-			if (!add_word(array, &array_index, word_len, start, s))
+			if (!add_word(array, word_len, start, s))
 				return (0);
 		}
 		i++;
