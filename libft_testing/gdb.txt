@@ -1,0 +1,186 @@
+ 
+Reading symbols from a.out...
+Process record: the program is not being run.
+Temporary breakpoint 1 at 0x11a9: file split_test.c, line 6.
+Starting program: /home/drew/Documents/ecole_42/libft/libft_testing/a.out split\ \ \ \ \|\|this\|string\|for\|\|me\|\|\|\|\!\| \|
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffdb88) at split_test.c:6
+ft_split (s=0x7fffffffdf9e "split    ||this|string|for||me||||!|", c=124 '|') at ft_split.c:57
+warning: Source file is more recent than executable.
+$1 = 0
+$2 = 0
+Reading symbols from a.out...
+Temporary breakpoint 1 at 0x11bc: file split_test.c, line 11.
+Starting program: /home/drew/Documents/ecole_42/libft/libft_testing/a.out split\ \ \ \ \|\|this\|string\|for\|\|me\|\|\|\|\!\| \|
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffdb88) at split_test.c:11
+ft_split (s=0x7fffffffdf9e "split    ||this|string|for||me||||!|", c=124 '|') at ft_split.c:54
+$1 = 0
+$2 = 6
+Process record and replay target doesn't support syscall number 318
+Process record: failed to record execution log.
+
+Program stopped.
+0x00007ffff7dc6c85 in __GI___getrandom (buffer=buffer@entry=0x7ffff7fa04d8 <tcache_key>, length=length@entry=8, flags=flags@entry=1) at ../sysdeps/unix/sysv/linux/getrandom.c:29
+Reading symbols from a.out...
+Temporary breakpoint 1 at 0x11bc: file split_test.c, line 11.
+Starting program: /home/drew/Documents/ecole_42/libft/libft_testing/a.out split\ \ \ \ \|\|this\|string\|for\|\|me\|\|\|\|\!\| \|
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffdb88) at split_test.c:11
+ft_split (s=0x7fffffffdf9e "split    ||this|string|for||me||||!|", c=124 '|') at ft_split.c:54
+$1 = 6
+ft_bzero (str=0x5555555592a0, len=7) at ft_bzero.c:19
+$2 = 7
+$3 = 7
+ft_split (s=0x7fffffffdf9e "split    ||this|string|for||me||||!|", c=124 '|') at ft_split.c:63
+$4 = (char **) 0x5555555592a0
+0x5555555592a0:	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'
+0x5555555592a7:	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'
+0x5555555592ae:	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'
+0x5555555592b5:	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'
+0x5555555592bc:	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'
+Invalid number "7bc".
+0x5555555592c3:	0 '\000'
+0x5555555592a0:	00000000	00000000	00000000	00000000	00000000	00000000	00000000
+Hardware watchpoint 2: s[i]
+$5 = 115 's'
+$6 = 0
+$7 = 0
+$8 = 0x7fffffffdf9e "split    ||this|string|for||me||||!|"
+Already logging to gdb.txt.
+$9 = 0x7fffffffdf9e "split    ||this|string|for||me||||!|"
+
+Hardware watchpoint 2: s[i]
+
+Old value = 115 's'
+New value = 112 'p'
+ft_split (s=0x7fffffffdf9e "split    ||this|string|for||me||||!|", c=124 '|') at ft_split.c:71
+
+Hardware watchpoint 2: s[i]
+
+Old value = 112 'p'
+New value = 108 'l'
+ft_split (s=0x7fffffffdf9e "split    ||this|string|for||me||||!|", c=124 '|') at ft_split.c:71
+
+Hardware watchpoint 2: s[i]
+
+Old value = 108 'l'
+New value = 105 'i'
+ft_split (s=0x7fffffffdf9e "split    ||this|string|for||me||||!|", c=124 '|') at ft_split.c:71
+
+Hardware watchpoint 2: s[i]
+
+Old value = 105 'i'
+New value = 116 't'
+ft_split (s=0x7fffffffdf9e "split    ||this|string|for||me||||!|", c=124 '|') at ft_split.c:71
+
+Hardware watchpoint 2: s[i]
+
+Old value = 116 't'
+New value = 32 ' '
+ft_split (s=0x7fffffffdf9e "split    ||this|string|for||me||||!|", c=124 '|') at ft_split.c:71
+
+Hardware watchpoint 2: s[i]
+
+Old value = 32 ' '
+New value = 124 '|'
+ft_split (s=0x7fffffffdf9e "split    ||this|string|for||me||||!|", c=124 '|') at ft_split.c:71
+$10 = 9
+$11 = 0x7fffffffdf9e "split    ||this|string|for||me||||!|"
+0x5555555592a0:	-32 '\340'	-110 '\222'	85 'U'	85 'U'	85 'U'	85 'U'	0 '\000'
+$12 = 0x5555555592e0 "split    "
+$13 = 1
+Hardware watchpoint 3: array_index
+Hardware watchpoint 4: s[i]
+Num     Type           Disp Enb Address            What
+2       hw watchpoint  keep y                      s[i]
+	breakpoint already hit 6 times
+3       hw watchpoint  keep y                      array_index
+4       hw watchpoint  keep y                      s[i]
+
+Hardware watchpoint 2: s[i]
+
+Old value = 124 '|'
+New value = 116 't'
+ft_split (s=0x7fffffffdf9e "split    ||this|string|for||me||||!|", c=124 '|') at ft_split.c:65
+
+Hardware watchpoint 2: s[i]
+
+Old value = 116 't'
+New value = 104 'h'
+ft_split (s=0x7fffffffdf9e "split    ||this|string|for||me||||!|", c=124 '|') at ft_split.c:71
+
+Hardware watchpoint 2: s[i]
+
+Old value = 104 'h'
+New value = 105 'i'
+ft_split (s=0x7fffffffdf9e "split    ||this|string|for||me||||!|", c=124 '|') at ft_split.c:71
+
+Hardware watchpoint 2: s[i]
+
+Old value = 105 'i'
+New value = 115 's'
+ft_split (s=0x7fffffffdf9e "split    ||this|string|for||me||||!|", c=124 '|') at ft_split.c:71
+
+Hardware watchpoint 2: s[i]
+
+Old value = 115 's'
+New value = 124 '|'
+ft_split (s=0x7fffffffdf9e "split    ||this|string|for||me||||!|", c=124 '|') at ft_split.c:71
+Hardware watchpoint 5: word_len
+Warning:
+Could not insert hardware watchpoint 2.
+Could not insert hardware breakpoints:
+You may have requested too many hardware breakpoints/watchpoints.
+
+Command aborted.
+Num     Type           Disp Enb Address            What
+2       hw watchpoint  keep y                      s[i]
+	breakpoint already hit 11 times
+3       hw watchpoint  keep y                      array_index
+5       hw watchpoint  keep y                      word_len
+Warning:
+Could not insert hardware watchpoint 2.
+Could not insert hardware breakpoints:
+You may have requested too many hardware breakpoints/watchpoints.
+
+Command aborted.
+Warning:
+Could not insert hardware watchpoint 2.
+Could not insert hardware breakpoints:
+You may have requested too many hardware breakpoints/watchpoints.
+
+Command aborted.
+Warning:
+Could not insert hardware watchpoint 2.
+Could not insert hardware breakpoints:
+You may have requested too many hardware breakpoints/watchpoints.
+
+Command aborted.
+Warning:
+Could not insert hardware watchpoint 2.
+Could not insert hardware breakpoints:
+You may have requested too many hardware breakpoints/watchpoints.
+
+Command aborted.
+Num     Type           Disp Enb Address            What
+2       hw watchpoint  keep y                      s[i]
+	breakpoint already hit 11 times
+3       hw watchpoint  keep y                      array_index
+5       hw watchpoint  keep y                      word_len
+$14 = 0x7fffffffdf9e "split    ||this|string|for||me||||!|"
+$15 = 11
+$16 = 0x7fffffffdfa9 "this|string|for||me||||!|"
+$17 = 4
+$18 = (char **) 0x5555555592a0
+0x5555555592a0:	-32 '\340'	-110 '\222'	85 'U'	85 'U'	85 'U'	85 'U'	0 '\000'
+0x5555555592a0:	-32 '\340'	-110 '\222'	85 'U'	85 'U'	85 'U'	85 'U'	0 '\000'
+0x5555555592a0:	0x555592e0	0x5555	0x55559300	0x5555
+0x5555555592b0:	0x0	0x0	0x0
+0x555592e0:	Cannot access memory at address 0x555592e0

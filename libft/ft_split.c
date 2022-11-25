@@ -11,11 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
-//#include <stdlib.h>			//remove with libft
-//#include "../libft/libft.h"	//remove with libft
-
-
 
 int	get_word_count(char *s, char c)
 {
@@ -41,6 +36,7 @@ int	free_all(char **array, int fail_index)
 	{
 		fail_index--;
 		free(array[fail_index]);
+		array[fail_index] = 0;
 	}
 	free(array);
 	return (0);
@@ -83,6 +79,7 @@ char **ft_split(char const *s, char c)
 			if (array[array_index] == 0)
 			{
 				free_all(array, array_index);
+				array = 0;
 				return (0);
 			}
 			array_index++;

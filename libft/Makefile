@@ -69,7 +69,7 @@ so:
 
 # Need to look up the syntax here.
 .c.o:
-	gcc ${CFLAGS} -c $< -o ${<:.c=.o}
+	gcc ${CFLAGS} -g -c $< -o ${<:.c=.o}
 
 # clean only deletes object files.
 clean:
