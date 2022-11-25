@@ -53,13 +53,12 @@ char **ft_split(char const *s, char c)
 
 	array = 0;
 	word_count = 0;
-	if (s == 0 || c == 0)
+	if (s == 0)
 		return (0);
 	word_count = get_word_count((char *)s, c);
-	array = (char **)malloc((word_count + 1) * sizeof(char *));
+	array = (char **)ft_calloc(1, (word_count + 1) * sizeof(char *));
 	if (array == 0)
 		return (0);
-	ft_bzero(array, (size_t)(word_count + 1));
 	i = 0;
 	array_index = 0;
 	while (s[i])
