@@ -14,10 +14,9 @@
 
 static int	ft_count(int n)
 {
-	int n_size;
+	int	n_size;
 
 	n_size = 0;
-
 	if (n == 0)
 		return (1);
 	if (n < 0)
@@ -45,7 +44,7 @@ char	*ft_itoa(int n)
 		return (0);
 	if (n == 0)
 		*s = '0';
-	if (n < 0)		
+	if (n < 0)
 	{
 		s[0] = '-';
 		n *= -1;
