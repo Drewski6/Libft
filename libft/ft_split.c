@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	get_word_count(char *s, char c)
+static int	get_word_count(char *s, char c)
 {
 	int	word_count;
 	int	i;
@@ -31,7 +31,7 @@ int	get_word_count(char *s, char c)
 	return (word_count);
 }
 
-int	free_all(char **array, int fail_index)
+static int	free_all(char **array, int fail_index)
 {
 	while (fail_index > 0)
 	{
@@ -43,7 +43,7 @@ int	free_all(char **array, int fail_index)
 	return (0);
 }
 
-int	add_word(char **array, int word_len, int start, char *s)
+static int	add_word(char **array, int word_len, int start, char *s)
 {
 	int	i;
 
@@ -60,7 +60,7 @@ int	add_word(char **array, int word_len, int start, char *s)
 	return (1);
 }
 
-int	fill_array(char **array, char *s, char c)
+static int	fill_array(char **array, char *s, char c)
 {
 	int		i;
 	int		word_len;
