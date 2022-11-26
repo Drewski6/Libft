@@ -1,0 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/26 13:53:54 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/26 13:53:56 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_putnbr_fd(int n, int fd)
+{
+    long    nbl;
+    char    c;  
+
+    nbl = (long)n;
+    if (nbl < 0)
+        write(1, "-", 1); 
+    if (nbl / 10 != 0)  
+    {   
+        if (nbl < 0)
+            ft_putnbr_fd((nbl / 10) * -1, fd);
+        else
+            ft_putnbr_fd(nbl / 10, fd);
+    }   
+    if (nbl < 0)
+        c = (((nbl % 10) * -1) + '0');
+    else
+        c = (nbl % 10 + '0');
+    write(1, &c, 1); 
+    return;
+}
