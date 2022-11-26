@@ -49,19 +49,36 @@ SRCS =	ft_isalpha.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c
-# Not finished. Check Bonus.
+
+BONUS_SRCS = ft_lstnew
+	# ft_lstadd_front \
+	# ft_lstsize \
+	# ft_lstlast \
+	# ft_lstadd_back \
+	# ft_lstdelone \
+	# ft_lstclear \
+	# ft_lstiter \
+	# ft_lstmap
 
 # Need to look up the syntax here.
 OBJS = ${SRCS:.c=.o}
+
+BONUS_OBJS = ${BONUS_SRCS:.c=.o}
 
 INCS = libft.h
 
 CFLAGS = -Wall -Wextra -Werror -c -g
 
+CC = cc
+
 all: $(NAME)
 
-$(NAME): $(OBJS) $(INCS)
-	ar rcs $(NAME) -o $(OBJS)
+
+$(NAME): $(OBJS) $(BONUS_OBJS) $(INCS)
+	ar rcs $(NAME) -o $(OBJS) $(BONUS_OBJS)
+
+bonus: $(OBJS) $(BONUS_OBJS) $(INCS)
+	ar rcs $(NAME) -o $(OBJS) $(BONUS_OBJS)
 
 so:
 	gcc -nostartfiles -fPIC $(CFLAGS) $(SRCS)
@@ -73,7 +90,7 @@ so:
 
 # clean only deletes object files.
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 # fclean deletes object files and the binary.
 fclean:	clean
