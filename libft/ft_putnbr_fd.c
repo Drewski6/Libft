@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 
     nbl = (long)n;
     if (nbl < 0)
-        write(1, "-", 1); 
+        write(fd, "-", 1); 
     if (nbl / 10 != 0)  
     {   
         if (nbl < 0)
@@ -31,6 +31,6 @@ void	ft_putnbr_fd(int n, int fd)
         c = (((nbl % 10) * -1) + '0');
     else
         c = (nbl % 10 + '0');
-    write(1, &c, 1); 
+    write(fd, &c, 1); 
     return;
 }
