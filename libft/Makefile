@@ -71,22 +71,23 @@ CFLAGS = -Wall -Wextra -Werror -c -g
 
 CC = cc
 
+# Build Mandatory Functions
 all: $(NAME)
 
+$(NAME): $(OBJS) $(INCS)
+	ar rcs $(NAME) -o $(OBJS)
 
-$(NAME): $(OBJS) $(BONUS_OBJS) $(INCS)
-	ar rcs $(NAME) -o $(OBJS) $(BONUS_OBJS)
-
+# Build Mandatory and Bonus Functions.
 bonus: $(OBJS) $(BONUS_OBJS) $(INCS)
 	ar rcs $(NAME) -o $(OBJS) $(BONUS_OBJS)
 
 so:
-	gcc -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+	$(CC) -nostartfiles -shared -o libft.so $(OBJS)
 
 # Need to look up the syntax here.
 .c.o:
-	gcc ${CFLAGS} $< -o ${<:.c=.o}
+	$(CC) ${CFLAGS} $< -o ${<:.c=.o}
 
 # clean only deletes object files.
 clean:

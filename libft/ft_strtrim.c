@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_in_charset(int c, char *set)
+static int	ft_in_charset(int c, char *set)
 {
 	while (*set)
 	{
