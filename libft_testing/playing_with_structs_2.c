@@ -27,9 +27,9 @@ int main (void)
 	p_s_list_1_init->next = &s_list_1_init;
 
 // Now we can access s_list_1_init's content from p_s_list_1_init.
-	printf("Content pointed to by s_list_1_init from p_s_list_1_init:\t%s\n", (char *)p_s_list_1_init->next->content);
+	printf("Content pointed to by s_list_1_init from p_s_list_1_init:\t%s\n", (char *)(*(*p_s_list_1_init).next).content);
 
-// the struct->member operator is the same as *struct.member
+// the pstruct->member operator is the same as *pstruct.member
 // p_s_list_1_init->content
 // (*p_s_list_1_init).content
 

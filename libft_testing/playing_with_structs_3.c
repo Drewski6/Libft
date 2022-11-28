@@ -36,7 +36,5 @@ int main (void)
 	free(second);
 	free(third);
 
-	ft_lstnew(string_1);
-
 	return (0);
 }

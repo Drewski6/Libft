@@ -18,7 +18,8 @@ struct	s_list_1
 struct s_list_2
 {
 	void			*content;
-	struct s_list_1	*next;
+	struct s_list_local	*next;
+	int			n;
 }					t_list_2;
 
 int main (void)
@@ -43,7 +44,7 @@ int main (void)
 	printf("size of t_list_2:\t\t%ld\n", sizeof(t_list_2));
 
 // Becuase t_list_2 is an initialized instance of struct s_list_2, we can access it's content
-	printf("value of t_list_2.content:\t%p\n", t_list_2.content);
+	//printf("value of t_list_2.content:\t%p\n", t_list_2.content);
 // We cannot access the content of a type (struct s_list_1) because it is not initialized yet.
 	//printf("value of struct s_list_1.content: %p\n", struct s_list_1.content);
 // Despite not being initialized, we can get it's size with sizeof.
