@@ -10,7 +10,7 @@ int main (int argc, char *argv[])
 
 	i = 0;
 	return_len = 0;
-	split_array = ft_split("tripouille", 0);
+	split_array = ft_split("Hi", 0);
 
 /*	while (split_array[return_len])
 		return_len++;
@@ -23,13 +23,15 @@ int main (int argc, char *argv[])
 	printf("\n");
 	*/
 
-	while (split_array[i])
+	if (split_array)
 	{
-		free(split_array[i]);
-		i++;
+		while (split_array[i])
+		{
+			free(split_array[i]);
+			i++;
+		}
+		free(split_array);
 	}
-
-	free(split_array);
 
 	return (0);
 }

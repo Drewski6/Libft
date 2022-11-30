@@ -67,7 +67,7 @@ BONUS_OBJS = ${BONUS_SRCS:.c=.o}
 
 INCS = libft.h
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 CC = cc
 

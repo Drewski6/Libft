@@ -25,13 +25,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		s_len = ft_strlen((char *)s + start);
 	if (s_len < len)
 	{
-		ptr = (char *)ft_calloc(1, (s_len + 1) * sizeof(char));
+		ptr = (char *)ft_calloc((s_len + 1), sizeof(char));
 		if (s_len > 0 && ptr)
 			ft_strlcpy(ptr, (char *)s + start, s_len + 1);
 	}
 	else
 	{
-		ptr = (char *)ft_calloc(1, (len + 1) * sizeof(char));
+		ptr = (char *)ft_calloc((len + 1), sizeof(char));
 		if (ptr)
 			ft_strlcpy(ptr, (char *)s + start, len + 1);
 	}
