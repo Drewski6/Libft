@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	int_build(char *str)
+static int	int_build(char *str)
 {
 	int	ret_int;
 

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpentlan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 13:57:33 by dpentlan          #+#    #+#             */
 /*   Updated: 2022/11/11 13:57:37 by dpentlan         ###   ########.fr       */

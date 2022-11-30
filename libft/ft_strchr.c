@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpentlan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:07:07 by dpentlan          #+#    #+#             */
 /*   Updated: 2022/11/11 15:07:10 by dpentlan         ###   ########.fr       */

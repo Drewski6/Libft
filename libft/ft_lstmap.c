@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpentlan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:03:16 by dpentlan          #+#    #+#             */
 /*   Updated: 2022/11/28 12:03:17 by dpentlan         ###   ########.fr       */

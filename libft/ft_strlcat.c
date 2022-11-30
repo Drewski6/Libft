@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpentlan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 12:58:53 by dpentlan          #+#    #+#             */
 /*   Updated: 2022/11/11 12:59:00 by dpentlan         ###   ########.fr       */
@@ -21,6 +21,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest_len = 0U;
 	src_len = 0U;
 	i = 0U;
+	if (src == 0 || dest == 0)
+		return (0);
 	while (dest[dest_len] != '\0')
 		dest_len++;
 	while (src[src_len] != '\0')

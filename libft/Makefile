@@ -3,7 +3,7 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dpentlan <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 14:36:56 by dpentlan          #+#    #+#              #
 #    Updated: 2022/11/07 14:36:58 by dpentlan         ###   ########.fr        #
@@ -82,8 +82,8 @@ bonus: $(OBJS) $(BONUS_OBJS) $(INCS)
 	ar rcs $(NAME) -o $(OBJS) $(BONUS_OBJS)
 
 so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-	$(CC) -nostartfiles -shared -o libft.so $(OBJS)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(BONUS_SRCS)
+	$(CC) -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_OBJS)
 
 # Need to look up the syntax here.
 .c.o:

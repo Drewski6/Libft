@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpentlan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:02:47 by dpentlan          #+#    #+#             */
 /*   Updated: 2022/11/28 12:02:49 by dpentlan         ###   ########.fr       */
@@ -17,6 +17,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*current;
 	t_list	*next_node;
 
+	if (lst == 0 || del == 0)
+		return ;
 	current = *lst;
 	while (current)
 	{
