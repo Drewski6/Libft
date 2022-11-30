@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-static int	count_words(char *s, char c)
+static int	get_word_count(char *s, char c)
 {
-	int	i;
 	int	word_count;
+	int	i;
 
 	i = 0;
 	word_count = 0;
@@ -30,70 +30,80 @@ static int	count_words(char *s, char c)
 	return (word_count);
 }
 
-void	empty_table(char ***split_table)
+static void	*free_all(char **array, int fail_index)
+{
+	while (fail_index)
+	{
+		free(array[fail_index]);
+		array[fail_index] = 0;
+		fail_index--;
+	}
+	free(array);
+	array = 0;
+	return (array);
+}
+
+static int	add_word(char **array, int word_len, int start, char *s)
 {
 	int	i;
 
 	i = 0;
-	while ((*split_table)[i])
-	{
-		free((*split_table)[i]);
+	while (array[i])
 		i++;
+	array[i] = ft_substr(s, start, word_len);
+	if (array[i] == 0)
+	{
+		free_all(array, i);
+		array = 0;
+		return (0);
 	}
-	ft_bzero(*split_table, i);
-	free(*split_table);
-	*split_table = 0;
+	return (word_len);
 }
 
-char	**fill_table(char **split_table, char *s, char c)
+static int	fill_array(char **array, char *s, char c)
 {
-	size_t	start;
-	int		j;
 	int		i;
+	int		word_len;
+	int		start;
 
-	start = 0;
-	j = 0;
 	i = 0;
 	while (s[i])
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		if (s[i])	
-			start = i;	
-		while (s[i] && s[i] != c)
-			i++;
-		if (s[i])
+		word_len = 0;
+		start = 0;
+		if (s[i] != c)
+			start = i;
+		while (s[i] != c && s[i] != 0)
 		{
-			split_table[j] = ft_substr(s, start, (i - start));
-			if (!split_table[j])
-			{
-				empty_table(&split_table);
-				return (0);
-			}
-			j++;
+			word_len++;
+			i++;
 		}
+		if (word_len)
+		{
+			if (!add_word(array, word_len, start, s))
+				return (0);
+		}
+		i++;
 	}
-	return (split_table);
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		word_count;	
-	char	**split_table;
+	int		word_count;
+	char	**array;
 
-	split_table = 0;
+	array = 0;
 	word_count = 0;
-	word_count = count_words((char *)s, c);
+	if (s == 0)
+		return (0);
+	word_count = get_word_count((char *)s, c);
 	if (!word_count)
 		return (0);
-	split_table = (char **)malloc((word_count + 1) * sizeof(char *));
-	if (!split_table)
+	array = (char **)ft_calloc((word_count + 1), sizeof(char *));
+	if (!array)
 		return (0);
-	ft_bzero(split_table, word_count + 1);
-	if (!fill_table(split_table, (char *)s, c))
-	{
-		empty_table(&split_table);
+	if (!fill_array(array, (char *)s, c))
 		return (0);
-	}
-	return (split_table);
+	return (array);
 }
