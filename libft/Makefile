@@ -48,7 +48,7 @@ SRCS =	ft_isalpha.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
-	ft_putnbr_fd.c
+	ft_putnbr_fd.c \
 
 BONUS_SRCS = ft_lstnew.c \
 	ft_lstadd_front.c \
@@ -58,7 +58,7 @@ BONUS_SRCS = ft_lstnew.c \
 	ft_lstdelone.c \
 	ft_lstclear.c \
 	ft_lstiter.c \
-	ft_lstmap.c
+	ft_lstmap.c \
 
 # Need to look up the syntax here.
 OBJS = ${SRCS:.c=.o}
@@ -67,7 +67,7 @@ BONUS_OBJS = ${BONUS_SRCS:.c=.o}
 
 INCS = libft.h
 
-CFLAGS = -Wall -Wextra -Werror -c -g
+CFLAGS = -Wall -Wextra -Werror
 
 CC = cc
 
@@ -87,7 +87,7 @@ so:
 
 # Need to look up the syntax here.
 .c.o:
-	$(CC) ${CFLAGS} $< -o ${<:.c=.o}
+	$(CC) ${CFLAGS} -c $< -o ${<:.c=.o}
 
 # clean only deletes object files.
 clean:

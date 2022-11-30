@@ -9,12 +9,31 @@
 /*   Updated: 2022/11/28 11:15:21 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
 #include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
+	t_list *current;
+
+	current = lst;
+	if (!current)
+		return (0);
+	while (current->next)
+		current = current->next;
+	return (current);
+}
+*/
+#include "libft.h"
+
+t_list	*ft_lstlast(t_list *lst)
+{
+	t_list	*node;
+
+	node = lst;
+	if (node == NULL)
+		return (NULL);
+	while (node->next != NULL)
+		node = node->next;
+	return (node);
 }

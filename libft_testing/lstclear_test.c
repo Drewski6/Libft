@@ -59,7 +59,7 @@ int main (void)
 
 	print_list(first);
 
-	ft_lstdelone(first->next->next, delete_content);
+	ft_lstclear(&(first->next->next->next), delete_content);
 	
 	print_list(first);
 

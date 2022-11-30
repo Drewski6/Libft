@@ -496,3 +496,82 @@ $1 = 0x5555555596b0 "-"
 0x5555555596b8:	0 '\000'	0 '\000'	0 '\000'
 0x5555555596b0:	50 '2'	49 '1'	52 '4'	55 '7'	52 '4'	56 '8'	51 '3'	54 '6'
 0x5555555596b8:	52 '4'	56 '8'	0 '\000'
+Reading symbols from a.out...
+Temporary breakpoint 1 at 0x11f6: file lstdelone_test.c, line 25.
+Starting program: /home/drew/Documents/ecole_42/libft/libft_testing/a.out 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main () at lstdelone_test.c:25
+Breakpoint 2 at 0x5555555552f8: file lstdelone_test.c, line 46.
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+0x000055555555546c in ft_strlcpy (dest=0x55555555971a "string2", src=0x7fffffffdbba "string", size=19) at ft_strlcpy.c:20
+Reading symbols from a.out...
+Temporary breakpoint 1 at 0x1230: file lstdelone_test.c, line 24.
+Starting program: /home/drew/Documents/ecole_42/libft/libft_testing/a.out 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main () at lstdelone_test.c:24
+Process record does not support instruction bound.
+Process record does not support instruction 0x62 at address 0x7ffff7f31704.
+Process record: failed to record execution log.
+
+Program stopped.
+__strchrnul_evex () at ../sysdeps/x86_64/multiarch/strchr-evex.S:66
+Process record does not support instruction bound.
+Process record does not support instruction 0x62 at address 0x7ffff7f31704.
+Process record: failed to record execution log.
+Reading symbols from a.out...
+Temporary breakpoint 1 at 0x1230: file lstdelone_test.c, line 24.
+Starting program: /home/drew/Documents/ecole_42/libft/libft_testing/a.out 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main () at lstdelone_test.c:24
+Breakpoint 2 at 0x555555555341: file lstdelone_test.c, line 45.
+Continuing.
+
+Breakpoint 2, main () at lstdelone_test.c:45
+$1 = (t_list *) 0x5555555599b0
+$2 = (void *) 0x555555559750
+$3 = (void *) 0x555555559750
+$4 = (t_list *) 0x5555555599d0
+$5 = (t_list *) 0x5555555599b0
+$6 = (void *) 0x555555559750
+0x555555559750:	84 'T'	104 'h'	105 'i'	115 's'	32 ' '	105 'i'	115 's'	32 ' '
+0x555555559758:	97 'a'	32 ' '	115 's'	116 't'	114 'r'	105 'i'	110 'n'
+0x5555555599d0:	-112 '\220'	-105 '\227'	85 'U'	85 'U'	85 'U'	85 'U'	0 '\000'	0 '\000'
+0x5555555599d8:	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'
+0x5555555599e0:	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'
+0x5555555599e8:	33 '!'
+0x555555559750:	84 'T'	104 'h'	105 'i'	115 's'	32 ' '	105 'i'	115 's'	32 ' '
+0x555555559758:	97 'a'	32 ' '	115 's'	116 't'	114 'r'	105 'i'	110 'n'	103 'g'
+0x555555559760:	32 ' '	48 '0'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'
+0x555555559768:	33 '!'
+0x555555559790:	84 'T'	104 'h'	105 'i'	115 's'	32 ' '	105 'i'	115 's'	32 ' '
+0x555555559798:	97 'a'	32 ' '	115 's'	116 't'	114 'r'	105 'i'	110 'n'	103 'g'
+0x5555555597a0:	32 ' '	49 '1'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'	0 '\000'
+0x5555555597a8:	33 '!'
+Reading symbols from a.out...
+Temporary breakpoint 1 at 0x1155: file playing_with_structs_4.c, line 20.
+Starting program: /home/drew/Documents/ecole_42/libft/libft_testing/a.out 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main () at playing_with_structs_4.c:20
+$1 = {n = 0, b = 0, w = 0 '\000', u = 0 '\000', i = 0 '\000', m = 0x0, p = 0 '\000'}
+Undefined command: "sizeof".  Try "help".
+Value can't be converted to integer.
+Value can't be converted to integer.
+$2 = {n = 0, b = 0, w = 0 '\000', u = 0 '\000', i = 0 '\000', m = 0x0, p = 0 '\000'}
+$3 = 0
+$4 = (int *) 0x7fffffffdbc0
+$5 = (int *) 0x7fffffffdbc4
+$6 = 0x7fffffffdbc8 ""
+$7 = 0x7fffffffdbc9 ""
+$8 = 0x7fffffffdbca ""
+$9 = (char **) 0x7fffffffdbd0
+$10 = 0x7fffffffdbd8 ""
