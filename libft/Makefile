@@ -6,12 +6,9 @@
 #    By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 14:36:56 by dpentlan          #+#    #+#              #
-#    Updated: 2022/11/07 14:36:58 by dpentlan         ###   ########.fr        #
+#    Updated: 2022/12/01 12:54:26 by dpentlan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-# This makefile is going to compile all the .c source files into .o object files
-# Then package them with the archiver "ar" command. 
 
 NAME = libft.a
 
@@ -50,7 +47,7 @@ SRCS =	ft_isalpha.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 
-BONUS_SRCS = ft_lstnew.c \
+BONUS_SRCS =	ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
 	ft_lstlast.c \
@@ -67,35 +64,31 @@ BONUS_OBJS = ${BONUS_SRCS:.c=.o}
 
 INCS = libft.h
 
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 
 CC = cc
 
-# Build Mandatory Functions
+SLIB = ar rcs
+
 all: $(NAME)
 
 $(NAME): $(OBJS) $(INCS)
-	ar rcs $(NAME) -o $(OBJS)
+	@$(SLIB) $(NAME) -o $(OBJS)
 
-# Build Mandatory and Bonus Functions.
 bonus: $(OBJS) $(BONUS_OBJS) $(INCS)
-	ar rcs $(NAME) -o $(OBJS) $(BONUS_OBJS)
+	@$(SLIB) $(NAME) -o $(OBJS) $(BONUS_OBJS)
 
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(BONUS_SRCS)
-	$(CC) -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_OBJS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_OBJS)
 
-# Need to look up the syntax here.
-.c.o:
-	$(CC) ${CFLAGS} -c $< -o ${<:.c=.o}
+%.o: %.c
+	@$(CC) ${CFLAGS} -c $< -o ${<:.c=.o}
 
-# clean only deletes object files.
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	@rm -f $(OBJS) $(BONUS_OBJS)
 
-# fclean deletes object files and the binary.
 fclean:	clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
-# re will delete the object files and binary and then re run all. Fresh start.
 re:	fclean all

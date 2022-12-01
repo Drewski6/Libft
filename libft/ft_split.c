@@ -30,7 +30,7 @@ static int	count_words(char *s, char c)
 	return (word_count);
 }
 
-void	empty_table(char ***split_table)
+static void	empty_table(char ***split_table)
 {
 	int	i;
 
@@ -45,14 +45,28 @@ void	empty_table(char ***split_table)
 	*split_table = 0;
 }
 
-char	**fill_table(char **split_table, char *s, char c)
+static int	add_word(char **split_table, char *src, size_t len)
+{
+	int	j;
+
+	j = 0;
+	while (split_table[j])
+		j++;
+	split_table[j] = ft_substr(src, 0, len);
+	if (!split_table[j])
+	{
+		empty_table(&split_table);
+		return (0);
+	}
+	return (len);
+}
+
+static char	**fill_table(char **split_table, char *s, char c)
 {
 	size_t	start;
-	size_t	j;
 	size_t	i;
 
 	start = 0;
-	j = 0;
 	i = 0;
 	while (s[i] && s[i] == c)
 		i++;
@@ -64,13 +78,8 @@ char	**fill_table(char **split_table, char *s, char c)
 			i++;
 		if (i > start)
 		{
-			split_table[j] = ft_substr(s, start, (i - start));
-			if (!split_table[j])
-			{
-				empty_table(&split_table);
+			if (!add_word(split_table, (s + start), (i - start)))
 				return (0);
-			}
-			j++;
 		}
 		while (s[i] && s[i] == c)
 			i++;
