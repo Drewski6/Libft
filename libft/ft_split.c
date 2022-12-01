@@ -48,21 +48,21 @@ void	empty_table(char ***split_table)
 char	**fill_table(char **split_table, char *s, char c)
 {
 	size_t	start;
-	int		j;
-	int		i;
+	size_t	j;
+	size_t	i;
 
 	start = 0;
 	j = 0;
 	i = 0;
+	while (s[i] && s[i] == c)
+		i++;
 	while (s[i])
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		if (s[i])	
-			start = i;	
+		if (s[i])
+			start = i;
 		while (s[i] && s[i] != c)
 			i++;
-		if (s[i])
+		if (i > start)
 		{
 			split_table[j] = ft_substr(s, start, (i - start));
 			if (!split_table[j])
@@ -72,6 +72,8 @@ char	**fill_table(char **split_table, char *s, char c)
 			}
 			j++;
 		}
+		while (s[i] && s[i] == c)
+			i++;
 	}
 	return (split_table);
 }
@@ -83,13 +85,12 @@ char	**ft_split(char const *s, char c)
 
 	split_table = 0;
 	word_count = 0;
-	word_count = count_words((char *)s, c);
-	if (!word_count)
+	if (s == 0)
 		return (0);
-	split_table = (char **)malloc((word_count + 1) * sizeof(char *));
+	word_count = count_words((char *)s, c);
+	split_table = (char **)ft_calloc((word_count + 1), sizeof(char *));
 	if (!split_table)
 		return (0);
-	ft_bzero(split_table, word_count + 1);
 	if (!fill_table(split_table, (char *)s, c))
 	{
 		empty_table(&split_table);

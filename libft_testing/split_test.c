@@ -23,7 +23,7 @@ int main (int argc, char *argv[])
 
 	i = 0;
 	return_len = 0;
-	split_array = ft_split("tripouille  42", ' ');
+	split_array = ft_split("      ", ' ');
 
 	if (!split_array)
 		printf("No return\n");

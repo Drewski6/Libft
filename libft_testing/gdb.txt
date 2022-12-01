@@ -1079,3 +1079,75 @@ $13 = 32 ' '
 $14 = 50 '2'
 $15 = 1
 Undefined command: "eixt".  Try "help".
+Reading symbols from a.out...
+Temporary breakpoint 1 at 0x1248: file split_test.c, line 24.
+Starting program: /home/drew/Documents/ecole_42/libft/libft_testing/a.out 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=1, argv=0x7fffffffdcf8) at split_test.c:24
+ft_split (s=0x555555556010 "tripouille  42", c=32 ' ') at ft_split.c:80
+fill_table (split_table=0x5555555592a0, s=0x555555556010 "tripouille  42", c=32 ' ') at ft_split.c:54
+$1 = 0
+$2 = 0x555555556010 "tripouille  42"
+No symbol "star" in current context.
+$3 = 0
+$4 = 0
+$5 = 10
+Reading symbols from a.out...
+Temporary breakpoint 1 at 0x1248: file split_test.c, line 24.
+Starting program: /home/drew/Documents/ecole_42/libft/libft_testing/a.out n
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=2, argv=0x7fffffffdcf8) at split_test.c:24
+ft_split (s=0x555555556010 "tripouille  42", c=32 ' ') at ft_split.c:82
+fill_table (split_table=0x5555555592a0, s=0x555555556010 "tripouille  42", c=32 ' ') at ft_split.c:54
+$1 = 10
+$2 = 32 ' '
+A syntax error in expression, near `'.
+$3 = 52 '4'
+$4 = 12
+$5 = 12
+Reading symbols from a.out...
+Remote debugging using | /usr/bin/vgdb --pid=8645
+relaying data between gdb and process 8645
+warning: remote target does not support file transfer, attempting to access files from local filesystem.
+Reading symbols from /lib64/ld-linux-x86-64.so.2...
+Reading symbols from /usr/lib/debug/.build-id/61/ef896a699bb1c2e4e231642b2e1688b2f1a61e.debug...
+0x00000000040202b0 in _start () from /lib64/ld-linux-x86-64.so.2
+The "remote" target does not support "run".  Try "help target" or "continue".
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+0x0000000004026b36 in __GI___open64_nocancel (file=file@entry=0x403bbc0 "/usr/libexec/valgrind/vgpreload_core-amd64-linux.so", oflag=oflag@entry=524288) at ../sysdeps/unix/sysv/linux/open64_nocancel.c:39
+Reading symbols from ./a.out...
+Remote debugging using | /usr/bin/vgdb --pid=8645
+relaying data between gdb and process 8645
+warning: remote target does not support file transfer, attempting to access files from local filesystem.
+Reading symbols from /usr/libexec/valgrind/vgpreload_core-amd64-linux.so...
+(No debugging symbols found in /usr/libexec/valgrind/vgpreload_core-amd64-linux.so)
+Reading symbols from /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so...
+(No debugging symbols found in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+Reading symbols from /lib/x86_64-linux-gnu/libc.so.6...
+Reading symbols from /usr/lib/debug/.build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug...
+Reading symbols from /lib64/ld-linux-x86-64.so.2...
+Reading symbols from /usr/lib/debug/.build-id/61/ef896a699bb1c2e4e231642b2e1688b2f1a61e.debug...
+0x0000000000109230 in print_return (tab=0x4a99040) at split_test.c:10
+The "remote" target does not support "run".  Try "help target" or "continue".
+main (argc=1, argv=0x1ffefffcc8) at split_test.c:33
+Reading symbols from ./a.out...
+Remote debugging using | /usr/bin/vgdb --pid=9449
+relaying data between gdb and process 9449
+warning: remote target does not support file transfer, attempting to access files from local filesystem.
+Reading symbols from /lib64/ld-linux-x86-64.so.2...
+Reading symbols from /usr/lib/debug/.build-id/61/ef896a699bb1c2e4e231642b2e1688b2f1a61e.debug...
+0x00000000040202b0 in _start () from /lib64/ld-linux-x86-64.so.2
+Single stepping until exit from function _start,
+which has no line number information.
+
+Program received signal SIGTRAP, Trace/breakpoint trap.
+0x0000000000109230 in print_return (tab=0x4a99040) at split_test.c:10
+main (argc=1, argv=0x1ffefffb98) at split_test.c:33
+__libc_start_call_main (main=main@entry=0x109235 <main>, argc=argc@entry=1, argv=argv@entry=0x1ffefffb98) at ../sysdeps/nptl/libc_start_call_main.h:74
+[Inferior 1 (Remote target) exited normally]
