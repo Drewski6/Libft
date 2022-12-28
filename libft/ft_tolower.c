@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*  *** ft_tolower (42 to lowercase) ***
+ *
+ *  Takes an ascii character 'c'.
+ *  Returns corresponding character in lowercase.
+ */
+
 int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)

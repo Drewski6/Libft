@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*  *** ft_isalpha (42 is alphabetical) ***
+ *
+ *  Takes an integer value for ascii character.
+ *  returns 1 if the character is an alphabet character.
+ *  returns 0 if the character is not an alphabet character.
+ */
+
 int	ft_isalpha(int c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))

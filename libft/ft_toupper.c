@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*  *** ft_toupper (42 to uppercase) ***
+ *
+ *  Takes an ascii character 'c'.
+ *  Returns corresponding character in uppercase.
+ */
+
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)

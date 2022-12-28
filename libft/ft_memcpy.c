@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+
+/*  *** ft_memcpy (42 memory copy) ***
+ *
+ *  Takes a destination pointer 'dest', a source pointer 'src',
+ *  and a size_t 'len'.
+ *  Copies byte by byte starting from memory address 'src' to memory address
+ *  'dest' for 'len' number of bytes.
+ *  Returns pointer to beginning of 'dest'.
+ */
+
 void	*ft_memcpy(void *dest, const void *src, size_t len)
 {
 	size_t	i;

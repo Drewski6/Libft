@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*  *** ft_strrchr (42 string reverse character)
+ *
+ *  Takes a string 's' and a character 'c'.
+ *  Returns the address of the last instance of character 'c' in string 's'.
+ */
+
 char	*ft_strrchr(const char *s, int c)
 {
 	int		i;

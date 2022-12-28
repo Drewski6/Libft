@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*  *** ft_memmove (42 memory move) ***
+ *
+ *  Takes destination pointer 'dest', source pointer 'src', and size_t len.
+ *  Copies 'len' number of bytes from memory area 'src' to memory area 'dest'.
+ *  Returns pointer 'dest'.
+ */
+
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
 	size_t	i;

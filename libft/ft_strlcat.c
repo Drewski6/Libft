@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/*  *** ft_strlcat (42 size-bounded string concatination) ***
+ *
+ *  Takes destination pointer 'dest', source string 'src', and size_t 'size'.
+ *  Concatenates string 'src' to the end of 'dest' by first seeking the first
+ *  Null terminator at the end of 'dest' and copying 'size' number of bytes
+ *  from 'src' to the end of 'dest'.
+ *  Returns number of bytes coppied.
+ */
+
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	dest_len;

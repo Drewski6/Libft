@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*  *** ft_strchr (42 string character) ***
+ *
+ *  Takes a string pointer 's' and a character 'c'.
+ *  Returns the address of the first instance of character 'c'.
+ */
+
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
