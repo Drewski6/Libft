@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/*  *** ft_strdup (42 string duplicate) ***
+ *
+ *  Takes a string 'src'.
+ *  Returns a newly allocated memory space which contains a duplicate of 
+ *  memory space 'src'.
+ *  Returns 0 if malloc fails.
+ */
+
 char	*ft_strdup(const char *src)
 {
 	char	*str_ret;

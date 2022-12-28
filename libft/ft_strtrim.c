@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*  *** ft_in_charset (42 in character set) ***
+ *
+ *  Takes int 'c' as a character and string 'set'.
+ *  Returns 1 if character 'c' is found in 'set'.
+ *  Returns 0 if character 'c' is not found in 'set'.
+ */
+
 static int	ft_in_charset(int c, char *set)
 {
 	while (*set)
@@ -22,6 +29,15 @@ static int	ft_in_charset(int c, char *set)
 	}
 	return (0);
 }
+
+/*  *** ft_strtrim (42 string trim) ***
+ *
+ *  Takes a string 's1' and a character set 'set'.
+ *  Returns a newly allocated memory space (via ft_substr)
+ *  with any characters present in 'set' removed from the beginning
+ *  and the end of the 's1'.
+ *  Returns 0 if either 's1' or 'set' are 0.
+ */
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

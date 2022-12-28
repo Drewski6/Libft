@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/*  *** ft_strnstr (42 string n string) ***
+ *
+ *  Takes a big string 'big' and a little string 'little' and size_t 'len'.
+ *  Searches through 'big' for the first occurance of 'little' substring.
+ *  Searches max 'len' number of bytes.
+ *  Returns address of first instance of 'little' in 'big'.
+ *  Returns 0 if no match found.
+ */
+
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;

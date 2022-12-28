@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*  *** ft_memcmp (42 memory compare) ***
+ *
+ *  Compares memory space 's1' with memory space 's2' for size_t 'n' bytes.
+ *  Returns 0 if no difference found.
+ *  Returns difference of byte values if a difference is found while comparing.
+ */
+
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;

@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*  *** ft_substr (42 sub-string) ***
+ *
+ *  Takes string 's', unsigned int 'start', and size_t 'len'.
+ *  Returns a newly allocated memory space containing a copy of the byte
+ *  values after 'start' byte offset for 'len' number of bytes.
+ */
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;

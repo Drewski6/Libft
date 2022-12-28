@@ -27,6 +27,11 @@ static int	int_build(char *str)
 	return (ret_int);
 }
 
+/*  *** ft_atoi (42 ascii to integer) ***
+ *
+ *  
+ */
+
 int	ft_atoi(const char *nptr)
 {
 	int	mult;

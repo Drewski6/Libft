@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/*  *** ft_calloc (42 contiguous allocation) ***
+ *
+ *  Takes a size_t 'num_elem' (number of elements) and
+ *  a size_t 'elem_size' (element size).
+ *  Allocates memory for the product of 'num_elem' and 'elem_size'
+ *  and initializes all memory to 0.
+ *  Returns address to allocated memory space.
+ */
+
 void	*ft_calloc(size_t num_elem, size_t elem_size)
 {
 	void	*ptr;

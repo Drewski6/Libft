@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*  *** ft_strjoin (42 string join) ***
+ *
+ *  Takes two strings 's1' and 's2'.
+ *  Returns a newly allocated memory space containing copies of 's1' memory
+ *  space followed by 's2' memory space.
+ */
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*ptr;
