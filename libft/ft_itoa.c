@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*  *** ft_count (count) ***
+ *
+ *  Takes integer 'n'.
+ *  Returns the number of bytes needed to represent integer 'n' as a string.
+ */
+
 static int	ft_count(int n)
 {
 	int	n_size;
@@ -31,6 +37,13 @@ static int	ft_count(int n)
 	}
 	return (n_size);
 }
+
+/*  *** ft_itoa (42 integer to ascii) ***
+ *
+ *  Takes an integer 'n'.
+ *  Returns a newly allocated memory space containing a string 
+ *  representation of int 'n'.
+ */
 
 char	*ft_itoa(int n)
 {

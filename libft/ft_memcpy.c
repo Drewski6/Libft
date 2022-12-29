@@ -12,7 +12,6 @@
 
 #include "libft.h"
 
-
 /*  *** ft_memcpy (42 memory copy) ***
  *
  *  Takes a destination pointer 'dest', a source pointer 'src',

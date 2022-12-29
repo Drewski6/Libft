@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/*  *** ft_strmapi (42 string map by index) ***
+ *
+ *  Applies function f to each character of the string 's', and passing its 
+ *  index as the first argument to create a newly allocated string, resulting
+ *  from successive applications of 'f'.
+ *  Returns newly allocated string.
+ *  Returns 0 if ft_strdup fails or either argument is null.
+ */
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*s_new;

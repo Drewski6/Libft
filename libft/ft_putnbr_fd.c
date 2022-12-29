@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*  *** ft_putnbr_fd (42 put number file descriptor) ***
+ *
+ *  Outputs the integer 'n' to the given file descriptor.
+ *  Returns nothing.
+ */
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	nbl;

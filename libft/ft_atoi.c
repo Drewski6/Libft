@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*  *** int_build (integer build) ***
+ *
+ *  Takes a string of ascii numerical characters and builds an integer
+ *  of the same value.
+ *  Returns integer representation of input string.
+ */
+
 static int	int_build(char *str)
 {
 	int	ret_int;
@@ -29,7 +36,8 @@ static int	int_build(char *str)
 
 /*  *** ft_atoi (42 ascii to integer) ***
  *
- *  
+ *  Takes a string with ascii numbers, spaces or a single '+' or '-' sign.
+ *  Returns a signed integer representation of of the string entered.
  */
 
 int	ft_atoi(const char *nptr)

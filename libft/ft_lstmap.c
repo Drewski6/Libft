@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/*  *** ft_lstmap (42 list map) ***
+ *
+ *  Iterates the list 'lst' and applies the function 'f' on the content of
+ *  each node. Creates a new list resulting of the successive applications of
+ *  the function 'f'. The 'del' function is used to delete the content of the 
+ *  node if needed.
+ *  Returns a pointer to first element in the new list.
+ */
+
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*node_new;

@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*  *** ft_lstlast (42 list last) ***
+ *
+ *  Returns the last node of the list.
+ */
+
 t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*current;

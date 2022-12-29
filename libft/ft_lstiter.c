@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*  *** ft_lstiter (42 list iterate) ***
+ *
+ *  Iterates the list 'lst' and applies the function 'f' on the content of each
+ *  node.
+ *  Returns nothing.
+ */
+
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst)

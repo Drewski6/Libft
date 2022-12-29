@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/*  *** ft_lstdelone (42 list delete one) ***
+ *
+ *  Takes as a parameter a node and frees the memory of the node's content using
+ *  the function 'del' given as a parameter and free the node.
+ *  The memory address 'next' is not freed.
+ *  Returns nothing.
+ */
+
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst == 0 || del == 0)

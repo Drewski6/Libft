@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*  *** ft_putendl_fd (42 put end line file descriptor) ***
+ *
+ *  Outputs the string 's' to the given file descriptor followed by a newline.
+ *  Returns nothing.
+ */
+
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (s == 0)
