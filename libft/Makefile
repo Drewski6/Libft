@@ -57,7 +57,6 @@ BONUS_SRCS =	ft_lstnew.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
 
-# Need to look up the syntax here.
 OBJS = ${SRCS:.c=.o}
 
 BONUS_OBJS = ${BONUS_SRCS:.c=.o}
@@ -77,10 +76,6 @@ $(NAME): $(OBJS) $(INCS)
 
 bonus: $(OBJS) $(BONUS_OBJS) $(INCS)
 	@$(SLIB) $(NAME) -o $(OBJS) $(BONUS_OBJS)
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(BONUS_SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_OBJS)
 
 %.o: %.c
 	@$(CC) ${CFLAGS} -c $< -o ${<:.c=.o}
