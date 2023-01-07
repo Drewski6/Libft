@@ -9,6 +9,6 @@ int main (void)
 	char	*dest;
 
 	dest = (char *)malloc(sizeof(char) * 100);
-	printf("%ld", strlcat(dest, "lorem ipsum dolor sit amet", 5));
+	printf("%ld", ft_strlcat(dest, "lorem ipsum dolor sit amet", 5));
 	return 0;
 }
