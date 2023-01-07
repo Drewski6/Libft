@@ -6,7 +6,7 @@
 #    By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 14:36:56 by dpentlan          #+#    #+#              #
-#    Updated: 2022/12/01 12:54:26 by dpentlan         ###   ########.fr        #
+#    Updated: 2022/11/07 14:36:58 by dpentlan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,18 +72,18 @@ SLIB = ar rcs
 all: $(NAME)
 
 $(NAME): $(OBJS) $(INCS)
-	@$(SLIB) $(NAME) -o $(OBJS)
+	$(SLIB) $(NAME) -o $(OBJS)
 
 bonus: $(OBJS) $(BONUS_OBJS) $(INCS)
-	@$(SLIB) $(NAME) -o $(OBJS) $(BONUS_OBJS)
+	$(SLIB) $(NAME) -o $(OBJS) $(BONUS_OBJS)
 
 %.o: %.c
-	@$(CC) ${CFLAGS} -c $< -o ${<:.c=.o}
+	$(CC) ${CFLAGS} -c $< -o ${<:.c=.o}
 
 clean:
-	@rm -f $(OBJS) $(BONUS_OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean:	clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re:	fclean all
