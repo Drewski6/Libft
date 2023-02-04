@@ -1,0 +1,1868 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/16 10:15:41 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/16 10:15:42 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** int_build (integer build) ***
+ *
+ *  Takes a string of ascii numerical characters and builds an integer
+ *  of the same value.
+ *  Returns integer representation of input string.
+ */
+
+static int	int_build(char *str)
+{
+	int	ret_int;
+
+	ret_int = 0;
+	while (*str >= '0' && *str <= '9')
+	{
+		ret_int += *str - '0';
+		if (str[1] >= '0' && str[1] <= '9')
+			ret_int *= 10;
+		str++;
+	}
+	return (ret_int);
+}
+
+/*  *** ft_atoi (42 ascii to integer) ***
+ *
+ *  Takes a string with ascii numbers, spaces or a single '+' or '-' sign.
+ *  Returns a signed integer representation of of the string entered.
+ */
+
+int	ft_atoi(const char *nptr)
+{
+	int	mult;
+
+	mult = 1;
+	while (*nptr == 32 || *nptr == '\f' || *nptr == '\n'
+		|| *nptr == '\r' || *nptr == '\t' || *nptr == '\v')
+		nptr++;
+	if (*nptr == '-' || *nptr == 43)
+	{
+		if (*nptr == '-')
+			mult *= -1;
+		nptr++;
+	}
+	while (*nptr)
+	{
+		if (*nptr >= '0' && *nptr <= '9')
+			return (int_build((char *)nptr) * mult);
+		else
+			return (0);
+	}
+	return (0);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/11 12:56:13 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/11 12:56:23 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_bzero (42 byte zero) ***
+ *
+ *  Takes a pointer 'str', and a size_t 'len'.
+ *  Sets 'len' number of memory addresses to 0 starting from address 'str'.
+ *  Returns nothing.
+ */
+
+void	ft_bzero(void *str, size_t len)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < len)
+	{
+		*(char *)str = 0;
+		str++;
+		i++;
+	}
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/17 10:57:36 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/17 10:57:39 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_calloc (42 contiguous allocation) ***
+ *
+ *  Takes a size_t 'nmemb' (number of members) and a size_t 'size' (member size).
+ *  Allocates memory for the product of 'nmemb' and 'size'
+ *  and initializes all memory to 0.
+ *  Returns freeable pointer to 1 NULL byte if 'nmemb' or 'size' is 0.
+ *  Returns address to allocated memory space.
+ */
+
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	void	*pvoid;
+	char	*pchar;
+
+	if (nmemb == 0 || size == 0)
+	{
+		pchar = malloc(sizeof(char));
+		if (!pchar)
+			return (0);
+		pchar[0] = 0;
+		return (pchar);
+	}
+	if (nmemb > SIZE_MAX / size)
+		return (0);
+	pvoid = malloc(nmemb * size);
+	if (pvoid)
+		ft_bzero (pvoid, nmemb * size);
+	return (pvoid);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/08 17:10:36 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/08 17:10:39 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_isalnum (42 is alpha-numeric) ***
+ *
+ *  Takes an integer value for ascii character.
+ *  Inclusive OR of result of ft_isalpha and ft_isdigit functions.
+ *  Returns 1 if the character is an alpha-numeric character.
+ *  Returns 0 if the character is not an alpha-numeric character.
+ */
+
+int	ft_isalnum(int c)
+{
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	else
+		return (0);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/07 15:11:16 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/07 15:11:19 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_isalpha (42 is alphabetical) ***
+ *
+ *  Takes an integer value for ascii character.
+ *  returns 1 if the character is an alphabet character.
+ *  returns 0 if the character is not an alphabet character.
+ */
+
+int	ft_isalpha(int c)
+{
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	else
+		return (0);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/11 12:56:54 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/11 12:57:01 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_ascii (42 is ascii) ***
+ *
+ *  Takes an integer value for ascii character.
+ *  returns 1 if the character is an ascii character.
+ *  returns 0 if the character is not an ascii character.
+ */
+
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/08 16:53:10 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/08 16:53:14 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_isdigit (42 is digit) ***
+ *
+ *  Takes an integer value for ascii character.
+ *  returns 1 if the character is a digit character.
+ *  returns 0 if the character is not a digit character.
+ */
+
+int	ft_isdigit(int c)
+{
+	if (c >= 48 && c <= 57)
+		return (1);
+	else
+		return (0);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/11 12:57:41 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/11 12:57:45 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_isprint (42 is printable) ***
+ *
+ *  Takes an integer value for ascii character.
+ *  returns 1 if the character is a printable character.
+ *  returns 0 if the character is not a printable character.
+ */
+
+int	ft_isprint(int c)
+{
+	if (c >= 32 && c <= 126)
+		return (1);
+	else
+		return (0);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/25 19:26:08 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/25 19:26:13 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_count (count) ***
+ *
+ *  Takes integer 'n'.
+ *  Returns the number of bytes needed to represent integer 'n' as a string.
+ */
+
+static int	ft_count(int n)
+{
+	int	n_size;
+
+	n_size = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+	{
+		n_size += 2;
+		n /= -10;
+	}
+	while (n != 0)
+	{
+		n_size += 1;
+		n /= 10;
+	}
+	return (n_size);
+}
+
+/*  *** ft_itoa (42 integer to ascii) ***
+ *
+ *  Takes an integer 'n'.
+ *  Returns a newly allocated memory space containing a string 
+ *  representation of int 'n'.
+ */
+
+char	*ft_itoa(int n)
+{
+	static int	s_len;
+	char		*s;
+
+	s_len = 0;
+	s_len = ft_count(n);
+	s = (char *)ft_calloc(1, (s_len + 1) * sizeof(char));
+	if (!s)
+		return (0);
+	if (n == 0)
+		*s = '0';
+	if (n < 0)
+	{
+		s[0] = '-';
+		n *= -1;
+	}
+	while ((unsigned int) n > 0)
+	{
+		s[(s_len - 1)] = ((unsigned int) n % 10) + '0';
+		n = (unsigned int) n / 10;
+		s_len--;
+	}
+	return (s);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/28 11:26:39 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/28 11:26:49 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_lstadd_back (42 list add back) ***
+ *
+ *  Adds the node 'new' at the end of the list.
+ *  Returns nothing.
+ */
+
+void	ft_lstadd_back(t_list **lst, t_list *new)
+{
+	t_list	*current;
+
+	current = 0;
+	current = ft_lstlast(*lst);
+	if (!current)
+		*lst = new;
+	else
+		current->next = new;
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/27 22:19:28 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/27 22:19:30 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_lstadd_front (42 list add front) ***
+ *
+ *  Adds the nod 'new' at the beginning of the list 'lst'.
+ *  Returns nothing.
+ */
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	new->next = *lst;
+	*lst = new;
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/28 12:02:47 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/28 12:02:49 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_lstclear (42 list clear) ***
+ *
+ *  Deletes and frees the given node and every successor of the that node,
+ *  using the function 'del' and free.
+ *  Finally, the pointer to the list is set to NULL.
+ *  Returns nothing.
+ */
+
+void	ft_lstclear(t_list **lst, void (*del)(void *))
+{
+	t_list	*current;
+	t_list	*next_node;
+
+	if (lst == 0 || del == 0)
+		return ;
+	current = *lst;
+	while (current)
+	{
+		del(current->content);
+		next_node = current->next;
+		free(current);
+		current = next_node;
+	}
+	*lst = 0;
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/28 11:48:08 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/28 11:48:10 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_lstdelone (42 list delete one) ***
+ *
+ *  Takes as a parameter a node and frees the memory of the node's content using
+ *  the function 'del' given as a parameter and free the node.
+ *  The memory address 'next' is not freed.
+ *  Returns nothing.
+ */
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	if (lst == 0 || del == 0)
+		return ;
+	del(lst->content);
+	free(lst);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/28 12:03:07 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/28 12:03:10 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_lstiter (42 list iterate) ***
+ *
+ *  Iterates the list 'lst' and applies the function 'f' on the content of each
+ *  node.
+ *  Returns nothing.
+ */
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/28 11:15:14 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/28 11:15:21 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_lstlast (42 list last) ***
+ *
+ *  Returns the last node of the list.
+ */
+
+t_list	*ft_lstlast(t_list *lst)
+{
+	t_list	*current;
+
+	current = lst;
+	if (!current)
+		return (0);
+	while (current->next)
+		current = current->next;
+	return (current);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/28 12:03:16 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/28 12:03:17 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_lstmap (42 list map) ***
+ *
+ *  Iterates the list 'lst' and applies the function 'f' on the content of
+ *  each node. Creates a new list resulting of the successive applications of
+ *  the function 'f'. The 'del' function is used to delete the content of the 
+ *  node if needed.
+ *  Returns a pointer to first element in the new list.
+ */
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+{
+	t_list	*node_new;
+	t_list	*first_new;
+
+	first_new = 0;
+	node_new = 0;
+	while (lst)
+	{
+		node_new = ft_lstnew(f(lst->content));
+		if (!node_new)
+		{
+			ft_lstclear(&first_new, del);
+			return (0);
+		}
+		ft_lstadd_back(&first_new, node_new);
+		lst = lst->next;
+	}
+	return (first_new);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/26 23:00:36 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/26 23:00:42 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_lstnew (42 list new) ***
+ *
+ *  Allocates and returns a new node. The member variable 'content' is
+ *  initialized with the value of the parameter 'content'. The variable 'next'
+ *  is initialized to NULL.
+ *  Returns 0 if allocation unsuccessful.
+ *  Returns pointer to new list head if successful.
+ */
+
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*new;
+
+	new = (t_list *)malloc(1 * sizeof(t_list));
+	if (!new)
+		return (0);
+	new->content = content;
+	new->next = NULL;
+	return (new);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/27 22:44:55 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/27 22:44:56 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_lstsize (42 list size) ***
+ *
+ *  Counts the number of nodes in a list.
+ *  Counts by moving to next node and count number of moves until lst->next
+ *  equals NULL.
+ *  Returns number of nodes as an int.
+ */
+
+int	ft_lstsize(t_list *lst)
+{
+	int	size;
+
+	if (!lst)
+		return (0);
+	size = 1;
+	while (lst->next)
+	{
+		lst = lst->next;
+		size++;
+	}
+	return (size);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/14 10:58:12 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/14 10:58:16 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_memchr (42 memory character) ***
+ *
+ *  Takes a pointer 's', an integer 'c' and size_t 'n'.
+ *  Checks 'n' number of bytes for character 'c'.
+ *  Returns address of first found byte that matches 'c'.
+ *  If none is found, returns 0.
+ */
+
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (*((unsigned char *)s + i) == (unsigned char)c)
+			return (((unsigned char *)s + i));
+		i++;
+	}
+	return (0);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/14 11:58:30 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/14 11:58:33 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_memcmp (42 memory compare) ***
+ *
+ *  Compares memory space 's1' with memory space 's2' for size_t 'n' bytes.
+ *  Returns 0 if no difference found.
+ *  Returns difference of byte values if a difference is found while comparing.
+ */
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	size_t	i;
+
+	if (n == 0)
+		return (0);
+	i = 0;
+	while (*((char *)s1 + i) == *((char *)s2 + i) && i < n - 1)
+	{
+		i++;
+	}
+	if (i == n)
+		return (0);
+	else
+		return (*((unsigned char *)s1 + i) - *((unsigned char *)s2 + i));
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/11 12:57:55 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/11 12:57:56 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_memcpy (42 memory copy) ***
+ *
+ *  Takes a destination pointer 'dest', a source pointer 'src',
+ *  and a size_t 'len'.
+ *  Copies byte by byte starting from memory address 'src' to memory address
+ *  'dest' for 'len' number of bytes.
+ *  Returns pointer to beginning of 'dest'.
+ */
+
+void	*ft_memcpy(void *dest, const void *src, size_t len)
+{
+	size_t	i;
+
+	i = 0;
+	if (dest == 0 && src == 0)
+		return (0);
+	while (i < len)
+	{
+		*(char *)(dest + i) = *(char *)(src + i);
+		i++;
+	}
+	return (dest);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/11 12:58:05 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/11 12:58:20 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_memmove (42 memory move) ***
+ *
+ *  Takes destination pointer 'dest', source pointer 'src', and size_t len.
+ *  Copies 'len' number of bytes from memory area 'src' to memory area 'dest'.
+ *  Returns pointer 'dest'.
+ */
+
+void	*ft_memmove(void *dest, const void *src, size_t len)
+{
+	size_t	i;
+
+	i = 0;
+	if (src == 0 && dest == 0)
+		return (0);
+	if ((unsigned long int)dest - (unsigned long int)src >= len)
+	{
+		while (i < len)
+		{
+			*(char *)(dest + i) = *(char *)(src + i);
+			i++;
+		}
+	}
+	else
+	{
+		while (i < len)
+		{
+			*(char *)(dest + (len - 1 - i)) = *(char *)(src + (len - 1 - i));
+			i++;
+		}
+	}
+	return (dest);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/11 12:58:28 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/11 12:58:38 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_memset (42 memory set) ***
+ *
+ *  Takes a character pointer 'str', an integer 'c', and a size_t 'len'.
+ *  Sets 'len' number of memory addresses to value of 'c'.
+ *  Returns a pointer to 'str'.
+ */
+
+void	*ft_memset(void *str, int c, size_t len)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < len)
+	{
+		*(char *)(str + i) = (unsigned char)c;
+		i++;
+	}
+	return (str);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/26 13:33:09 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/26 13:33:13 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_putchar_fd (42 put character file descriptor) ***
+ *
+ *  Outputs the character 'c' to the given file descriptor.
+ *  Returns nothing.
+ */
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/26 13:53:40 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/26 13:53:41 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_putendl_fd (42 put end line file descriptor) ***
+ *
+ *  Outputs the string 's' to the given file descriptor followed by a newline.
+ *  Returns nothing.
+ */
+
+void	ft_putendl_fd(char *s, int fd)
+{
+	if (s == 0)
+		return ;
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/26 13:53:54 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/26 13:53:56 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_putnbr_fd (42 put number file descriptor) ***
+ *
+ *  Outputs the integer 'n' to the given file descriptor.
+ *  Returns nothing.
+ */
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	long	nbl;
+	char	c;
+
+	nbl = (long)n;
+	if (nbl < 0)
+		write(fd, "-", 1);
+	if (nbl / 10 != 0)
+	{
+		if (nbl < 0)
+			ft_putnbr_fd((nbl / 10) * -1, fd);
+		else
+			ft_putnbr_fd(nbl / 10, fd);
+	}
+	if (nbl < 0)
+		c = (((nbl % 10) * -1) + '0');
+	else
+		c = (nbl % 10 + '0');
+	write(fd, &c, 1);
+	return ;
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/26 13:53:30 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/26 13:53:32 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_putstr_fd (42 put string file descriptor) ***
+ *
+ *  Outputs the string 's' to the given file descriptor.
+ *  Returns nothing.
+ */
+
+void	ft_putstr_fd(char *s, int fd)
+{
+	if (s == 0)
+		return ;
+	write(fd, s, ft_strlen(s));
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/19 20:06:00 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/19 20:06:02 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** count_words (count words) ***
+ *
+ *  Takes a string 's' and a character 'c'.
+ *  Returns the number of strings that would result from splitting string 's'
+ *  every time character 'c' is encountered.
+ */
+
+static int	count_words(char *s, char c)
+{
+	int	i;
+	int	word_count;
+
+	i = 0;
+	word_count = 0;
+	while (s[i])
+	{
+		if (i == 0 && s[i] != c)
+			word_count++;
+		if (s[i] == c && s[i + 1] != c && s[i + 1] != 0)
+			word_count++;
+		i++;
+	}
+	return (word_count);
+}
+
+/*  *** empty_table (empty table) ***
+ *
+ *  Takes an address to a table of strings (pointer to pointer to pointer).
+ *  Each element in 'split_table' (each element is a string) is freed.
+ *  Finally the memory space for 'split_table' is reset to 0 with ft_bzero.
+ *  Returns nothing.
+ */
+
+static void	empty_table(char ***split_table)
+{
+	int	i;
+
+	i = 0;
+	while ((*split_table)[i])
+	{
+		free((*split_table)[i]);
+		i++;
+	}
+	ft_bzero(*split_table, i);
+	free(*split_table);
+	*split_table = 0;
+}
+
+/*  *** add_word (add word) ***
+ *
+ *  Takes a table of strings (pointer to pointer), a word to add to
+ *  the table 'str' and size_t 'len'.
+ *  Seeks for the first empty element in the string table, then assigns
+ *  that table element to adds a newly allocated memory space (via substr)
+ *  which contains 'str' of size 'len'.
+ *  Returns number of bytes copied on success.
+ *  Returns 0 if malloc fails.
+ */
+
+static int	add_word(char **split_table, char *src, size_t len)
+{
+	int	j;
+
+	j = 0;
+	while (split_table[j])
+		j++;
+	split_table[j] = ft_substr(src, 0, len);
+	if (!split_table[j])
+	{
+		empty_table(&split_table);
+		return (0);
+	}
+	return (len);
+}
+
+/*  *** fill_table (fill table) ***
+ *
+ *  Takes a table of strings 'split_table', a string 's', and a character 'c'.
+ *  Iterates over string 's' looking for character separator 'c', when one
+ *  is found, that word is coppied (via add_word) to the 'split_table'.
+ *  Returns a table of individually malloced strings.
+ *  Returns 0 if error with memory allocation.
+ */
+
+static char	**fill_table(char **split_table, char *s, char c)
+{
+	size_t	start;
+	size_t	i;
+
+	start = 0;
+	i = 0;
+	while (s[i] && s[i] == c)
+		i++;
+	while (s[i])
+	{
+		if (s[i])
+			start = i;
+		while (s[i] && s[i] != c)
+			i++;
+		if (i > start)
+		{
+			if (!add_word(split_table, (s + start), (i - start)))
+				return (0);
+		}
+		while (s[i] && s[i] == c)
+			i++;
+	}
+	return (split_table);
+}
+
+/*  *** ft_split (42 split) ***
+ *
+ *  Takes a string 's' and a character 'c'.
+ *  Returns a table of pointers that point to strings derived from splitting
+ *  string 's' into smaller strings every time a character 'c' is found.
+ *  Returns 0 if memory allocations fail or 's' is null.
+ */
+
+char	**ft_split(char const *s, char c)
+{
+	int		word_count;	
+	char	**split_table;
+
+	split_table = 0;
+	word_count = 0;
+	if (s == 0)
+		return (0);
+	word_count = count_words((char *)s, c);
+	split_table = (char **)ft_calloc((word_count + 1), sizeof(char *));
+	if (!split_table)
+		return (0);
+	if (!fill_table(split_table, (char *)s, c))
+	{
+		empty_table(&split_table);
+		return (0);
+	}
+	return (split_table);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/11 15:07:07 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/11 15:07:10 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_strchr (42 string character) ***
+ *
+ *  Takes a string pointer 's' and a character 'c'.
+ *  Returns the address of the first instance of character 'c'.
+ */
+
+char	*ft_strchr(const char *s, int c)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != 0)
+	{
+		if (s[i] == (unsigned char)c)
+			return ((char *)&s[i]);
+		i++;
+	}
+	if (s[i] == (unsigned char)c)
+		return ((char *)&s[i]);
+	return (0);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/17 13:22:54 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/17 13:23:34 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_strdup (42 string duplicate) ***
+ *
+ *  Takes a string 'src'.
+ *  Returns a newly allocated memory space which contains a duplicate of 
+ *  memory space 'src'.
+ *  Returns 0 if malloc fails.
+ */
+
+char	*ft_strdup(const char *src)
+{
+	char	*str_ret;
+	size_t	src_len;
+	size_t	i;
+
+	i = 0;
+	src_len = ft_strlen(src);
+	str_ret = (char *)malloc(src_len * sizeof(char) + 1);
+	if (!str_ret)
+		return (0);
+	while (src[i])
+	{
+		str_ret[i] = src[i];
+		i++;
+	}
+	str_ret[i] = '\0';
+	return (str_ret);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/26 13:11:16 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/26 13:11:17 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_striteri (42 iterate by index) ***
+ *
+ *  Applies the function 'f' on each character of the string passed
+ *  argument, passing its index as the first argument. Each character is
+ *  passed by address to 'f' to be modified if necessary.
+ *  Returns nothing.
+ */
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	int		i;
+
+	i = 0;
+	if (s != 0 && f != 0)
+	{
+		while (s[i])
+		{
+			f(i, &s[i]);
+			i++;
+		}
+	}
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/17 15:16:23 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/17 15:16:34 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_strjoin (42 string join) ***
+ *
+ *  Takes two strings 's1' and 's2'.
+ *  Returns a newly allocated memory space containing copies of 's1' memory
+ *  space followed by 's2' memory space.
+ */
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*ptr;
+	size_t	s1_len;
+	size_t	s2_len;
+
+	if (s1 == 0 || s2 == 0)
+		return (0);
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	ptr = (char *)malloc((s1_len + s2_len + 1) * sizeof(char));
+	if (ptr == 0)
+		return (0);
+	ft_bzero(ptr, (s1_len + s2_len + 1));
+	ft_memcpy(ptr, (char *)s1, s1_len);
+	ft_memcpy((ptr + s1_len), (char *)s2, s2_len);
+	return (ptr);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/11 12:58:53 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/11 12:59:00 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_strlcat (42 size-bounded string concatination) ***
+ *
+ *  Takes destination pointer 'dest', source string 'src', and size_t 'size'.
+ *  Concatenates string 'src' to the end of 'dest' by first seeking the first
+ *  Null terminator at the end of 'dest' and copying 'size' number of bytes
+ *  from 'src' to the end of 'dest'.
+ *  Returns number of bytes coppied.
+ */
+
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
+{
+	size_t	dest_len;
+	size_t	src_len;
+	size_t	i;
+
+	dest_len = 0U;
+	src_len = 0U;
+	i = 0U;
+	if (src == 0 || dest == 0)
+		return (0);
+	while (dest[dest_len] != '\0')
+		dest_len++;
+	while (src[src_len] != '\0')
+		src_len++;
+	if (size == 0)
+		return (src_len);
+	while (src[i] != '\0' && dest_len + i < size - 1)
+	{
+		dest[dest_len + i] = src[i];
+		i++;
+	}
+	dest[dest_len + i] = '\0';
+	if (dest_len > size)
+		return (src_len + size);
+	return (dest_len + src_len);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/11 12:59:12 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/11 12:59:13 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_strlcpy (42 size-bounded string copy) ***
+ *
+ *  Takes destination string 'dest', source string 'stc', and size_t 'size'.
+ *  Copies maximum of 'size' bytes from 'src' to 'dest'.
+ *  Returns size_t number of bytes coppied.
+ */
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	size_t	i;
+
+	i = 0U;
+	while (*src != '\0')
+	{
+		if (i + 1 < size)
+		{
+			*dest = *src;
+			dest++;
+		}
+		src++;
+		i++;
+	}
+	if (size != 0)
+		*dest = '\0';
+	return (i);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/11 12:59:37 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/11 12:59:45 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_strlen (42 string length) ***
+ *
+ *  Takes a character pointer.
+ *  Returns size_t number of 8 bit memory spaces between input pointer and
+ *  the first null terminator.
+ */
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str && str[i])
+		i++;
+	return (i);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/26 12:41:51 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/26 12:41:54 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_strmapi (42 string map by index) ***
+ *
+ *  Applies function f to each character of the string 's', and passing its 
+ *  index as the first argument to create a newly allocated string, resulting
+ *  from successive applications of 'f'.
+ *  Returns newly allocated string.
+ *  Returns 0 if ft_strdup fails or either argument is null.
+ */
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char	*s_new;
+	int		i;
+
+	i = 0;
+	s_new = 0;
+	if (s == 0 || f == 0)
+		return (0);
+	s_new = ft_strdup((char *)s);
+	if (!s_new)
+		return (0);
+	while (s_new[i])
+	{
+		s_new[i] = f(i, s_new[i]);
+		i++;
+	}
+	return (s_new);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/13 10:13:09 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/13 10:13:35 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_strncmp (42 string number compare) ***
+ *
+ *  Takes 2 strings 's1' and 's2' and size_t 'n'.
+ *  Compares the first string to the second string for 'n' number of bytes.
+ *  Returns the difference of first byte found that is different if one is found.
+ *  Returns 0 if no difference is found.
+ */
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] != '\0' && i < n)
+		i++;
+	if (i == n)
+		return (0);
+	else
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/14 14:39:37 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/14 14:39:38 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_strnstr (42 string n string) ***
+ *
+ *  Takes a big string 'big' and a little string 'little' and size_t 'len'.
+ *  Searches through 'big' for the first occurance of 'little' substring.
+ *  Searches max 'len' number of bytes.
+ *  Returns address of first instance of 'little' in 'big'.
+ *  Returns 0 if no match found.
+ */
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	if (*little == 0 || big == 0)
+		return ((char *)big);
+	while (big[i] && i < len)
+	{
+		j = 0;
+		while (big[i + j] == little[j] && little[j] != 0)
+		{
+			j++;
+		}
+		if (little[j] == 0 && i + j <= len)
+			return ((char *)big + i);
+		i++;
+	}
+	return (0);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/11 17:18:16 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/11 17:18:18 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_strrchr (42 string reverse character)
+ *
+ *  Takes a string 's' and a character 'c'.
+ *  Returns the address of the last instance of character 'c' in string 's'.
+ */
+
+char	*ft_strrchr(const char *s, int c)
+{
+	int		i;
+	char	*last;
+
+	last = 0;
+	i = 0;
+	if ((unsigned char)c == 0)
+		return ((char *)s + ft_strlen(s));
+	while (s[i] != 0)
+	{
+		if (s[i] == (unsigned char)c)
+			last = (char *)&s[i];
+		i++;
+	}
+	return (last);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/17 17:20:47 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/17 17:21:34 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_in_charset (42 in character set) ***
+ *
+ *  Takes int 'c' as a character and string 'set'.
+ *  Returns 1 if character 'c' is found in 'set'.
+ *  Returns 0 if character 'c' is not found in 'set'.
+ */
+
+static int	ft_in_charset(int c, char *set)
+{
+	while (*set)
+	{
+		if (*set == (unsigned char)c)
+			return (1);
+		set++;
+	}
+	return (0);
+}
+
+/*  *** ft_strtrim (42 string trim) ***
+ *
+ *  Takes a string 's1' and a character set 'set'.
+ *  Returns a newly allocated memory space (via ft_substr)
+ *  with any characters present in 'set' removed from the beginning
+ *  and the end of the 's1'.
+ *  Returns 0 if either 's1' or 'set' are 0.
+ */
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	i;
+	size_t	j;
+	char	*ptr;
+	size_t	s1_len;
+
+	i = 0;
+	j = 0;
+	if (s1 == 0 || set == 0)
+		return (0);
+	s1_len = ft_strlen(s1);
+	while (ft_in_charset(*((char *)s1 + i), (char *)set))
+		i++;
+	while (ft_in_charset(*((char *)s1 + (s1_len - 1 - j)), (char *)set))
+		j++;
+	ptr = ft_substr(s1, i, (s1_len - (i + j)));
+	return (ptr);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/17 14:00:02 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/17 14:00:15 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_substr (42 sub-string) ***
+ *
+ *  Takes string 's', unsigned int 'start', and size_t 'len'.
+ *  Returns a newly allocated memory space containing a copy of the byte
+ *  values after 'start' byte offset for 'len' number of bytes.
+ */
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*ptr;
+	size_t	s_len;
+
+	if (s == 0)
+		return (0);
+	if (start > ft_strlen(s))
+		s_len = 0;
+	else
+		s_len = ft_strlen((char *)s + start);
+	if (s_len < len)
+	{
+		ptr = (char *)ft_calloc((s_len + 1), sizeof(char));
+		if (s_len > 0 && ptr)
+			ft_strlcpy(ptr, (char *)s + start, s_len + 1);
+	}
+	else
+	{
+		ptr = (char *)ft_calloc((len + 1), sizeof(char));
+		if (ptr)
+			ft_strlcpy(ptr, (char *)s + start, len + 1);
+	}
+	return (ptr);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/11 13:57:33 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/11 13:57:37 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_tolower (42 to lowercase) ***
+ *
+ *  Takes an ascii character 'c'.
+ *  Returns corresponding character in lowercase.
+ */
+
+int	ft_tolower(int c)
+{
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	else
+		return (c);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/11 13:06:56 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/11 13:06:58 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*  *** ft_toupper (42 to uppercase) ***
+ *
+ *  Takes an ascii character 'c'.
+ *  Returns corresponding character in uppercase.
+ */
+
+int	ft_toupper(int c)
+{
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	else
+		return (c);
+}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/07 14:31:39 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/11/30 07:25:16 by dpentlan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+//  header for my libft files.
+
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <stdlib.h>
+# include <stddef.h>
+# include <string.h>
+# include <bsd/string.h>
+# include <stdbool.h>
+# include <assert.h>
+# include <unistd.h>
+# include <ctype.h>
+# include <stdint.h>
+# include <assert.h>
+# include <sys/types.h>
+# include <stdio.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+size_t	ft_strlen(const char *str);
+void	*ft_memset(void *str, int c, size_t len);
+void	ft_bzero(void *str, size_t len);
+void	*ft_memcpy(void *dest, const void *src, size_t len);
+void	*ft_memmove(void *dest, const void *src, size_t len);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
+size_t	ft_strlcat(char *dest, const char *src, size_t size);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+int		ft_atoi(const char *nptr);
+void	*ft_calloc(size_t num_elem, size_t elem_size);
+char	*ft_strdup(const char *src);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+#endif
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/11/07 14:36:56 by dpentlan          #+#    #+#              #
+#    Updated: 2022/11/07 14:36:58 by dpentlan         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = libft.a
+
+SRCS =	ft_isalpha.c \
+	ft_isdigit.c \
+	ft_isalnum.c \
+	ft_isascii.c \
+	ft_isprint.c \
+	ft_strlen.c \
+	ft_memset.c \
+	ft_bzero.c \
+	ft_memcpy.c \
+	ft_memmove.c \
+	ft_strlcpy.c \
+	ft_strlcat.c \
+	ft_toupper.c \
+	ft_tolower.c \
+	ft_strchr.c \
+	ft_strrchr.c \
+	ft_strncmp.c \
+	ft_memchr.c \
+	ft_memcmp.c \
+	ft_strnstr.c \
+	ft_atoi.c \
+	ft_calloc.c \
+	ft_strdup.c \
+	ft_substr.c \
+	ft_strjoin.c \
+	ft_strtrim.c \
+	ft_split.c \
+	ft_itoa.c \
+	ft_strmapi.c \
+	ft_striteri.c \
+	ft_putchar_fd.c \
+	ft_putstr_fd.c \
+	ft_putendl_fd.c \
+	ft_putnbr_fd.c \
+
+BONUS_SRCS =	ft_lstnew.c \
+	ft_lstadd_front.c \
+	ft_lstsize.c \
+	ft_lstlast.c \
+	ft_lstadd_back.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstiter.c \
+	ft_lstmap.c \
+
+OBJS = ${SRCS:.c=.o}
+
+BONUS_OBJS = ${BONUS_SRCS:.c=.o}
+
+INCS = libft.h
+
+CFLAGS = -Wall -Wextra -Werror
+
+CC = cc
+
+SLIB = ar rcs
+
+all: $(NAME)
+
+$(NAME): $(OBJS) $(INCS)
+	$(SLIB) $(NAME) -o $(OBJS)
+
+bonus: $(OBJS) $(BONUS_OBJS) $(INCS)
+	$(SLIB) $(NAME) -o $(OBJS) $(BONUS_OBJS)
+
+%.o: %.c
+	$(CC) ${CFLAGS} -c $< -o ${<:.c=.o}
+
+clean:
+	rm -f $(OBJS) $(BONUS_OBJS)
+
+fclean:	clean
+	rm -f $(NAME)
+
+re:	fclean all
