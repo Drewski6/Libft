@@ -6,7 +6,7 @@
 #    By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 14:36:56 by dpentlan          #+#    #+#              #
-#    Updated: 2022/11/07 14:36:58 by dpentlan         ###   ########.fr        #
+#    Updated: 2023/01/26 17:05:04 by dpentlan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME = libft.a
 SRCS =	ft_isalpha.c \
 	ft_isdigit.c \
 	ft_isalnum.c \
+	# BOOKMARK
 	ft_isascii.c \
 	ft_isprint.c \
 	ft_strlen.c \
