@@ -10,7 +10,11 @@
 #                                                                              #
 # **************************************************************************** #
 
+.DEFAULT_GOAL = all
+
 NAME = libft.a
+
+# ***** Sources *****
 
 SRCS =	ft_isalpha.c \
 	ft_isdigit.c \
@@ -47,7 +51,7 @@ SRCS =	ft_isalpha.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
-
+	
 BONUS_SRCS =	ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
@@ -58,11 +62,36 @@ BONUS_SRCS =	ft_lstnew.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
 
-OBJS = ${SRCS:.c=.o}
+GNL_SRCS = get_next_line_bonus.c \
+	get_next_line_utils_bonus.c \
 
-BONUS_OBJS = ${BONUS_SRCS:.c=.o}
+SRCS_DIR = srcs/mandatory/
+
+BONUS_SRCS_DIR = srcs/bonus/
+
+GNL_SRCS_DIR = srcs/gnl/
+
+# ***** Includes *****
 
 INCS = libft.h
+
+INCS_DIR = includes/
+
+# ***** Objects *****
+
+OBJS = $(patsubst %.c,$(OBJS_DIR)%.o,$(SRCS))
+
+BONUS_OBJS = $(patsubst %.c,$(BONUS_OBJS_DIR)%.o,$(BONUS_SRCS))
+
+GNL_OBJS = $(patsubst %.c,$(GNL_OBJS_DIR)%.o,$(GNL_SRCS))
+
+OBJS_DIR = objs/mandatory/
+
+BONUS_OBJS_DIR = objs/bonus/
+
+GNL_OBJS_DIR = objs/gnl/
+
+# ***** Compiler and Archiver *****
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -70,19 +99,32 @@ CC = cc
 
 SLIB = ar rcs
 
+ALL_OBJS = $(OBJS) $(BONUS_OBJS) $(GNL_OBJS)
+
+# ***** Build *****
+
 all: $(NAME)
 
-$(NAME): $(OBJS) $(INCS)
+$(NAME): $(ALL_OBJS)
+	$(SLIB) $(NAME) -o $(ALL_OBJS)
+
+m: $(OBJS)
 	$(SLIB) $(NAME) -o $(OBJS)
 
-bonus: $(OBJS) $(BONUS_OBJS) $(INCS)
+bonus: $(OBJS) $(BONUS_OBJS)
 	$(SLIB) $(NAME) -o $(OBJS) $(BONUS_OBJS)
 
-%.o: %.c
-	$(CC) ${CFLAGS} -c $< -o ${<:.c=.o}
+$(OBJS_DIR)%.o: $(SRCS_DIR)%.c
+	$(CC) $(CFLAGS) -c -I$(INCS_DIR) $< -o $@
+
+$(BONUS_OBJS_DIR)%.o: $(BONUS_SRCS_DIR)%.c
+	$(CC) $(CFLAGS) -c -I$(INCS_DIR) $< -o $@
+
+$(GNL_OBJS_DIR)%.o: $(GNL_SRCS_DIR)%.c
+	$(CC) $(CFLAGS) -c -I$(INCS_DIR) $< -o $@
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS) $(GNL_OBJS)
 
 fclean:	clean
 	rm -f $(NAME)

@@ -29,6 +29,8 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 
+# include "get_next_line_bonus.h"
+
 typedef struct s_list
 {
 	void			*content;
