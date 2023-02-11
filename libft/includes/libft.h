@@ -29,7 +29,9 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 
+//	Additional projects
 # include "get_next_line_bonus.h"
+# include "ft_printf_bonus.h"
 
 typedef struct s_list
 {
