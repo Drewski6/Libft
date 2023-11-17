@@ -6,7 +6,7 @@
 #    By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 14:36:56 by dpentlan          #+#    #+#              #
-#    Updated: 2023/11/17 23:43:17 by dpentlan         ###   ########.fr        #
+#    Updated: 2023/11/17 23:56:35 by dpentlan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,8 +59,7 @@ SRCS =				mandatory/ft_isalpha.c \
 					bonus/ft_lstclear.c \
 					bonus/ft_lstiter.c \
 					bonus/ft_lstmap.c \
-					gnl/get_next_line_bonus.c \
-					gnl/ft_strjoin_gnl.c \
+					gnl/get_next_line.c \
 					ft_printf/ft_printf_bonus.c \
 					ft_printf/ft_printf_utils_1_bonus.c \
 					ft_printf/ft_printf_utils_2_bonus.c \

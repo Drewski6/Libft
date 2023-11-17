@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:31:39 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/30 07:25:16 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/17 23:57:34 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@
 # include <fcntl.h>
 
 //	Additional projects
-# include "get_next_line_bonus.h"
 # include "ft_printf_bonus.h"
 
 typedef struct s_list
