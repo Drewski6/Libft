@@ -1151,3 +1151,218 @@ Program received signal SIGTRAP, Trace/breakpoint trap.
 main (argc=1, argv=0x1ffefffb98) at split_test.c:33
 __libc_start_call_main (main=main@entry=0x109235 <main>, argc=argc@entry=1, argv=argv@entry=0x1ffefffb98) at ../sysdeps/nptl/libc_start_call_main.h:74
 [Inferior 1 (Remote target) exited normally]
++define hook-next
+Reading symbols from test_putnbr...
++exit
++define hook-next
+Reading symbols from test_putnbr...
++n
+++refresh
+The program is not being run.
++run
+Starting program: /home/drew/Documents/ecole_42/libft/libft_testing/test_putnbr 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Inferior 1 (process 6495) exited normally]
++break ft_putnbr_fd 
+Breakpoint 1 at 0x55555555518f
++run
+Starting program: /home/drew/Documents/ecole_42/libft/libft_testing/test_putnbr 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, 0x000055555555518f in ft_putnbr_fd ()
++exit
++define hook-next
+Reading symbols from test_putnbr...
++break ft_putnbr_fd 
+Breakpoint 1 at 0x118f
++run
+Starting program: /home/drew/Documents/ecole_42/libft/libft_testing/test_putnbr 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, 0x000055555555518f in ft_putnbr_fd ()
++n
+++refresh
+Single stepping until exit from function ft_putnbr_fd,
+which has no line number information.
+
+Breakpoint 1, 0x000055555555518f in ft_putnbr_fd ()
++n
+++refresh
+Single stepping until exit from function ft_putnbr_fd,
+which has no line number information.
+
+Breakpoint 1, 0x000055555555518f in ft_putnbr_fd ()
++start
+Temporary breakpoint 2 at 0x555555555171: file test_putnbr.c, line 6.
+Starting program: /home/drew/Documents/ecole_42/libft/libft_testing/test_putnbr 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 2, main () at test_putnbr.c:6
++s
+
+Breakpoint 1, 0x000055555555518f in ft_putnbr_fd ()
++exit
++define hook-next
+Reading symbols from test_putnbr...
++break ft_putnbr_fd
+Breakpoint 1 at 0x1199: file srcs/ft_putnbr_fd.c, line 22.
++run
+Starting program: /home/drew/Documents/ecole_42/libft/libft_testing/test_putnbr 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, ft_putnbr_fd (n=-12345, fd=1) at srcs/ft_putnbr_fd.c:22
++n
+++refresh
++n
+++refresh
++print n
+$1 = -12345
++n
+++refresh
++n
+++refresh
++n
+++refresh
++print nbl
+$2 = -12345
++n
+++refresh
++print n
+$3 = -12345
++print nbl
+$4 = -12345
++s
+
+Breakpoint 1, ft_putnbr_fd (n=1234, fd=1) at srcs/ft_putnbr_fd.c:22
++pritn n
+Undefined command: "pritn".  Try "help".
++print n
+$5 = 1234
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
++s
+
+Breakpoint 1, ft_putnbr_fd (n=123, fd=1) at srcs/ft_putnbr_fd.c:22
++print n
+$6 = 123
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
++s
+
+Breakpoint 1, ft_putnbr_fd (n=12, fd=1) at srcs/ft_putnbr_fd.c:22
++print n
+$7 = 12
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
++s
+
+Breakpoint 1, ft_putnbr_fd (n=1, fd=1) at srcs/ft_putnbr_fd.c:22
++print n
+$8 = 1
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
++print n
+$9 = 1
++pritn n
+Undefined command: "pritn".  Try "help".
++n
+++refresh
++print nbl
+$10 = 1
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
+ft_putnbr_fd (n=12, fd=1) at srcs/ft_putnbr_fd.c:36
++print n
+$11 = 12
++print n
+$12 = 12
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
+ft_putnbr_fd (n=123, fd=1) at srcs/ft_putnbr_fd.c:36
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
+ft_putnbr_fd (n=1234, fd=1) at srcs/ft_putnbr_fd.c:36
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
++n
+++refresh
+main () at test_putnbr.c:10
++n
+++refresh
++n
+++refresh
+__libc_start_call_main (main=main@entry=0x555555555169 <main>, argc=argc@entry=1, argv=argv@entry=0x7fffffffdce8) at ../sysdeps/nptl/libc_start_call_main.h:74
++exit

@@ -99,7 +99,7 @@ FT_PRINTF_OBJS_DIR = objs/
 
 # ***** Compiler and Archiver *****
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 CC = cc
 SLIB = ar rcs
 
