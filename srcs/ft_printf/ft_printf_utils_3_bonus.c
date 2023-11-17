@@ -6,11 +6,13 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 13:13:23 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/02/05 13:13:33 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 00:10:10 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_bonus.h"
+#include "ft_printf.h"
+#include <stdlib.h>
+#include "libft.h"
 
 /*	*** ft_bchar (42 byte char) ***
  *

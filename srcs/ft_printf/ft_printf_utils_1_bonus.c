@@ -6,11 +6,12 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 14:41:16 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/12/31 14:41:19 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 00:09:29 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_bonus.h"
+#include "ft_printf.h"
+#include "libft.h"
 
 /*  *** ft_putchar_buf (42 put character to buffer) ***
  *

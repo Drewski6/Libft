@@ -6,11 +6,12 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 14:22:48 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/12/31 14:22:49 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 00:07:18 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_bonus.h"
+#include "ft_printf.h"
+#include "libft.h"
 
 /*	*** ft_pointer_handle (42 pointer handler) ***
  *

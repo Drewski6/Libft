@@ -6,11 +6,12 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:02:57 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/02/06 13:03:00 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 00:10:47 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_bonus.h"
+#include "ft_printf.h"
+#include "libft.h"
 
 /*	*** t_flags_init (type flags (struct) initializer) ***
  *

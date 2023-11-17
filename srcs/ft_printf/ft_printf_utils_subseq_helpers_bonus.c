@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_utils_subseq_helpers.c                   :+:      :+:    :+:   */
+/*   ft_printf_utils_subseq_helpers_bonus.c             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 18:34:59 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/02/09 18:35:02 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 00:10:33 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_bonus.h"
+#include "ft_printf.h"
+#include <stdlib.h>
+#include "libft.h"
 
 /*	*** decimal_precision (decimal precision) ***
  *
