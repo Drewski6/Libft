@@ -1,0 +1,319 @@
+[
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_isalpha.c -o objs/mandatory/ft_isalpha.o",
+		"file" : "srcs/mandatory/ft_isalpha.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_isdigit.c -o objs/mandatory/ft_isdigit.o",
+		"file" : "srcs/mandatory/ft_isdigit.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_isalnum.c -o objs/mandatory/ft_isalnum.o",
+		"file" : "srcs/mandatory/ft_isalnum.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_isascii.c -o objs/mandatory/ft_isascii.o",
+		"file" : "srcs/mandatory/ft_isascii.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_isprint.c -o objs/mandatory/ft_isprint.o",
+		"file" : "srcs/mandatory/ft_isprint.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_strlen.c -o objs/mandatory/ft_strlen.o",
+		"file" : "srcs/mandatory/ft_strlen.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_memset.c -o objs/mandatory/ft_memset.o",
+		"file" : "srcs/mandatory/ft_memset.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_bzero.c -o objs/mandatory/ft_bzero.o",
+		"file" : "srcs/mandatory/ft_bzero.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_memcpy.c -o objs/mandatory/ft_memcpy.o",
+		"file" : "srcs/mandatory/ft_memcpy.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_memmove.c -o objs/mandatory/ft_memmove.o",
+		"file" : "srcs/mandatory/ft_memmove.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_strlcpy.c -o objs/mandatory/ft_strlcpy.o",
+		"file" : "srcs/mandatory/ft_strlcpy.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_strlcat.c -o objs/mandatory/ft_strlcat.o",
+		"file" : "srcs/mandatory/ft_strlcat.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_toupper.c -o objs/mandatory/ft_toupper.o",
+		"file" : "srcs/mandatory/ft_toupper.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_tolower.c -o objs/mandatory/ft_tolower.o",
+		"file" : "srcs/mandatory/ft_tolower.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_strchr.c -o objs/mandatory/ft_strchr.o",
+		"file" : "srcs/mandatory/ft_strchr.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_strrchr.c -o objs/mandatory/ft_strrchr.o",
+		"file" : "srcs/mandatory/ft_strrchr.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_strncmp.c -o objs/mandatory/ft_strncmp.o",
+		"file" : "srcs/mandatory/ft_strncmp.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_memchr.c -o objs/mandatory/ft_memchr.o",
+		"file" : "srcs/mandatory/ft_memchr.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_memcmp.c -o objs/mandatory/ft_memcmp.o",
+		"file" : "srcs/mandatory/ft_memcmp.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_strnstr.c -o objs/mandatory/ft_strnstr.o",
+		"file" : "srcs/mandatory/ft_strnstr.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_atoi.c -o objs/mandatory/ft_atoi.o",
+		"file" : "srcs/mandatory/ft_atoi.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_calloc.c -o objs/mandatory/ft_calloc.o",
+		"file" : "srcs/mandatory/ft_calloc.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_strdup.c -o objs/mandatory/ft_strdup.o",
+		"file" : "srcs/mandatory/ft_strdup.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_substr.c -o objs/mandatory/ft_substr.o",
+		"file" : "srcs/mandatory/ft_substr.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_strjoin.c -o objs/mandatory/ft_strjoin.o",
+		"file" : "srcs/mandatory/ft_strjoin.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_strtrim.c -o objs/mandatory/ft_strtrim.o",
+		"file" : "srcs/mandatory/ft_strtrim.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_split.c -o objs/mandatory/ft_split.o",
+		"file" : "srcs/mandatory/ft_split.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_itoa.c -o objs/mandatory/ft_itoa.o",
+		"file" : "srcs/mandatory/ft_itoa.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_strmapi.c -o objs/mandatory/ft_strmapi.o",
+		"file" : "srcs/mandatory/ft_strmapi.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_striteri.c -o objs/mandatory/ft_striteri.o",
+		"file" : "srcs/mandatory/ft_striteri.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_putchar_fd.c -o objs/mandatory/ft_putchar_fd.o",
+		"file" : "srcs/mandatory/ft_putchar_fd.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_putstr_fd.c -o objs/mandatory/ft_putstr_fd.o",
+		"file" : "srcs/mandatory/ft_putstr_fd.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_putendl_fd.c -o objs/mandatory/ft_putendl_fd.o",
+		"file" : "srcs/mandatory/ft_putendl_fd.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/mandatory/ft_putnbr_fd.c -o objs/mandatory/ft_putnbr_fd.o",
+		"file" : "srcs/mandatory/ft_putnbr_fd.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/bonus/ft_lstnew.c -o objs/bonus/ft_lstnew.o",
+		"file" : "srcs/bonus/ft_lstnew.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/bonus/ft_lstadd_front.c -o objs/bonus/ft_lstadd_front.o",
+		"file" : "srcs/bonus/ft_lstadd_front.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/bonus/ft_lstsize.c -o objs/bonus/ft_lstsize.o",
+		"file" : "srcs/bonus/ft_lstsize.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/bonus/ft_lstlast.c -o objs/bonus/ft_lstlast.o",
+		"file" : "srcs/bonus/ft_lstlast.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/bonus/ft_lstadd_back.c -o objs/bonus/ft_lstadd_back.o",
+		"file" : "srcs/bonus/ft_lstadd_back.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/bonus/ft_lstdelone.c -o objs/bonus/ft_lstdelone.o",
+		"file" : "srcs/bonus/ft_lstdelone.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/bonus/ft_lstclear.c -o objs/bonus/ft_lstclear.o",
+		"file" : "srcs/bonus/ft_lstclear.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/bonus/ft_lstiter.c -o objs/bonus/ft_lstiter.o",
+		"file" : "srcs/bonus/ft_lstiter.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/bonus/ft_lstmap.c -o objs/bonus/ft_lstmap.o",
+		"file" : "srcs/bonus/ft_lstmap.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/gnl/get_next_line_bonus.c -o objs/gnl/get_next_line_bonus.o",
+		"file" : "srcs/gnl/get_next_line_bonus.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/gnl/ft_strjoin_gnl.c -o objs/gnl/ft_strjoin_gnl.o",
+		"file" : "srcs/gnl/ft_strjoin_gnl.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/ft_printf/ft_printf_bonus.c -o objs/ft_printf/ft_printf_bonus.o",
+		"file" : "srcs/ft_printf/ft_printf_bonus.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/ft_printf/ft_printf_utils_1_bonus.c -o objs/ft_printf/ft_printf_utils_1_bonus.o",
+		"file" : "srcs/ft_printf/ft_printf_utils_1_bonus.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/ft_printf/ft_printf_utils_2_bonus.c -o objs/ft_printf/ft_printf_utils_2_bonus.o",
+		"file" : "srcs/ft_printf/ft_printf_utils_2_bonus.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/ft_printf/ft_printf_utils_3_bonus.c -o objs/ft_printf/ft_printf_utils_3_bonus.o",
+		"file" : "srcs/ft_printf/ft_printf_utils_3_bonus.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/ft_printf/ft_printf_utils_format_switch_bonus.c -o objs/ft_printf/ft_printf_utils_format_switch_bonus.o",
+		"file" : "srcs/ft_printf/ft_printf_utils_format_switch_bonus.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/ft_printf/ft_printf_utils_subseq_helpers_bonus.c -o objs/ft_printf/ft_printf_utils_subseq_helpers_bonus.o",
+		"file" : "srcs/ft_printf/ft_printf_utils_subseq_helpers_bonus.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/ft_printf/ft_printf_utils_t_flags_bonus.c -o objs/ft_printf/ft_printf_utils_t_flags_bonus.o",
+		"file" : "srcs/ft_printf/ft_printf_utils_t_flags_bonus.c"
+	}
+,
+	{
+		"directory" : "/home/drew/Documents/ecole_42/libft",
+		"command" : "cc -c -Wall -Wextra -Werror -g -Iincludes/ -MMD -MP srcs/ft_printf/ft_printf_utils_use_flags_bonus.c -o objs/ft_printf/ft_printf_utils_use_flags_bonus.o",
+		"file" : "srcs/ft_printf/ft_printf_utils_use_flags_bonus.c"
+	}
+]
