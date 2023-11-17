@@ -6,7 +6,7 @@
 #    By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 14:36:56 by dpentlan          #+#    #+#              #
-#    Updated: 2023/11/17 23:18:03 by dpentlan         ###   ########.fr        #
+#    Updated: 2023/11/17 23:43:17 by dpentlan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -108,7 +108,7 @@ clean:
 	@rm -rf $(OBJS_DIR)
 
 fclean:	clean
-	@rm -f $(NAME)
+	@rm -f $(NAME) compile_commands.json
 
 re:	fclean all
 
