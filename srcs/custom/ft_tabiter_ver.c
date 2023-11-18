@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 17:44:04 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 17:51:19 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 18:09:54 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 **		Bool function returns 0 on success and 1 on error.
 */
 
-bool	ft_tabiter_ver(char **tab, int (*f)(char *))
+int	ft_tabiter_ver(char **tab, int (*f)(char *, int(*)(int)), int (*c)(int))
 {
 	int	i;
 
@@ -34,7 +34,7 @@ bool	ft_tabiter_ver(char **tab, int (*f)(char *))
 		return (0);
 	while (tab[i])
 	{
-		if (!f(tab[i++]))
+		if (!f(tab[i++], c))
 			return (0);
 	}
 	return (1);

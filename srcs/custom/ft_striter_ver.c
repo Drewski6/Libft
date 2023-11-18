@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 17:51:32 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 17:54:30 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 18:09:33 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
  *		Bool function returns 1 for True and 0 for False.
  */
 
-bool	ft_striter_ver(char *str, int (*f)(int))
+int	ft_striter_ver(char *str, int (*f)(int))
 {
 	int	i;
 

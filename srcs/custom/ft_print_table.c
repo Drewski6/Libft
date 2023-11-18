@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 13:45:22 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 15:32:08 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 18:07:30 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ static void	ft_print_tab_flag_0(char **table)
 	int	i;
 
 	i = 0;
-	ft_printf("\n");
 	while (table[i])
 		ft_printf("%s\n", table[i++]);
 	return ;

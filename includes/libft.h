@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:31:39 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 17:55:07 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 18:10:25 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void	ft_print_table(char **table, int flag);
 void	ft_table_free(char **table);
 void	ft_newline_to_null(unsigned int i, char *ch_addr);
 size_t	ft_tablen(char **tab);
-bool	ft_tabiter_ver(char **tab, int (*f)(char *));
-bool	ft_striter_ver(char *str, int (*f)(int));
+int		ft_tabiter_ver(char **tab, int (*f)(char *, int(*)(int)), int (*c)(int));
+int		ft_striter_ver(char *str, int (*f)(int));
 
 #endif
