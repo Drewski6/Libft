@@ -6,7 +6,7 @@
 #    By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 14:36:56 by dpentlan          #+#    #+#              #
-#    Updated: 2023/11/18 16:50:41 by dpentlan         ###   ########.fr        #
+#    Updated: 2023/11/18 17:26:09 by dpentlan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,7 @@ SRCS =				mandatory/ft_isalpha.c \
 					custom/ft_print_table.c \
 					custom/ft_free_table.c \
 					custom/ft_newline_to_null.c \
+					custom/ft_tablen.c \
 
 SRCS_DIR = srcs/
 
