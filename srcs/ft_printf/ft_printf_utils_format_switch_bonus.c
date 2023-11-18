@@ -6,18 +6,21 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 20:16:36 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 00:08:52 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 22:13:07 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-/*  *** format_switch_buf_1 (format switch buffer #1) ***
+/*
+ *	***** format_switch_buf_1 *****
  *
- *	Part 1 of 3 functions that act as a switch for determining which function
- *	to use to turn 'parg' to a printable string. 
- *	Takes a t_flags struct pointer and va_list pointer.
- *	Returns 0 on success or -1 on ERROR.
+ *	DESCRIPTION:
+ *		Part 1 of 3 functions that act as a switch for determining which function
+ *		to use to turn 'parg' to a printable string. 
+ *		Takes a t_flags struct pointer and va_list pointer.
+ *	RETURN:
+ *		Returns 0 on success or -1 on ERROR.
  */
 
 int	format_switch_buf_1(t_flags *seq_info, va_list parg)
@@ -45,12 +48,15 @@ int	format_switch_buf_1(t_flags *seq_info, va_list parg)
 	return (0);
 }
 
-/*  *** format_switch_buf_2 (format switch buffer #2) ***
+/*
+ *	***** format_switch_buf_2 *****
  *
- *	Part 2 of 3 functions that act as a switch for determining which function
- *	to use to turn 'parg' to a printable string. 
- *	Takes a t_flags struct pointer and va_list pointer.
- *	Returns 0 on success or -1 on ERROR.
+ *	DESCRIPTION:
+ *		Part 2 of 3 functions that act as a switch for determining which function
+ *		to use to turn 'parg' to a printable string. 
+ *		Takes a t_flags struct pointer and va_list pointer.
+ *	RETURN:
+ *		Returns 0 on success or -1 on ERROR.
  */
 
 int	format_switch_buf_2(t_flags *seq_info, va_list parg)
@@ -78,12 +84,15 @@ int	format_switch_buf_2(t_flags *seq_info, va_list parg)
 	return (0);
 }
 
-/*  *** format_switch_buf_3 (format switch buffer #3) ***
+/*
+ *	***** format_switch_buf_3 *****
  *
- *	Part 3 of 3 functions that act as a switch for determining which function
- *	to use to turn 'parg' to a printable string. 
- *	Takes a t_flags struct pointer and va_list pointer.
- *	Returns 0 on success or -1 on ERROR.
+ *	DESCRIPTION:
+ *		Part 3 of 3 functions that act as a switch for determining which function
+ *		to use to turn 'parg' to a printable string. 
+ *		Takes a t_flags struct pointer and va_list pointer.
+ *	RETURN:
+ *		Returns 0 on success or -1 on ERROR.
  */
 
 int	format_switch_buf_3(t_flags *seq_info, va_list parg)

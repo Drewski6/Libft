@@ -6,18 +6,21 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:02:57 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 00:10:47 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 22:22:41 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-/*	*** t_flags_init (type flags (struct) initializer) ***
+/*
+ *	***** t_flags_init *****
  *
- *	Creates a new instance of t_flags struct and initializes values to 0.
- *	Takes nothing.
- *	Returns 0 on error or address of 'new_t_flags' struct on success.
+ *	DESCRIPTION:
+ *		Creates a new instance of t_flags struct and initializes values to 0.
+ *		Takes nothing.
+ *	RETURN:
+ *		Returns 0 on error or address of 'new_t_flags' struct on success.
  */
 
 t_flags	*t_flags_init(void)
@@ -41,12 +44,15 @@ t_flags	*t_flags_init(void)
 	return (new_t_flags);
 }
 
-/*	*** t_flags_li (type flags (struct) load integers) ***
+/*
+ *	***** t_flags_li *****
  *
- *	Runs atoi on a digit in the subsequence.
- *	Takes address of the digits in a subsequence 'seq_digits' and a pointer
- *	to a size_t 'seq_elem' counter / atoi return.
- *	Returns len in bytes of parsed string 'i' on success or -1 on ERROR.
+ *	DESCRIPTION:
+ *		Runs atoi on a digit in the subsequence.
+ *		Takes address of the digits in a subsequence 'seq_digits' and a pointer
+ *		to a size_t 'seq_elem' counter / atoi return.
+ *	RETURN:
+ *		Returns len in bytes of parsed string 'i' on success or -1 on ERROR.
  */
 
 int	t_flags_li(char *seq_digits, size_t *seq_elem)
@@ -72,14 +78,17 @@ int	t_flags_li(char *seq_digits, size_t *seq_elem)
 	return (i);
 }
 
-/*	*** t_flags_w_p (type flags (struct) width and precision) ***
+/*
+ *	***** t_flags_w_p *****
  *
- *	Parces sequence string and fills t_flags struct width and precision
- *	values.
- *	Takes t_flags struct pointer 'seq_info', address in main string 's' where
- *	the sequence starts 'seq_start', and an integer indicating the length of
- *	the sequence 'seq_len'.
- *	Returns 0 on success or -1 on error.
+ *	DESCRIPTION:
+ *		Parces sequence string and fills t_flags struct width and precision
+ *		values.
+ *		Takes t_flags struct pointer 'seq_info', address in main string 's' where
+ *		the sequence starts 'seq_start', and an integer indicating the length of
+ *		the sequence 'seq_len'.
+ *	RETURN:
+ *		Returns 0 on success or -1 on error.
  */
 
 int	t_flags_w_p(t_flags *seq_info, const char *seq_start, int seq_len)
@@ -111,13 +120,16 @@ int	t_flags_w_p(t_flags *seq_info, const char *seq_start, int seq_len)
 	return (0);
 }
 
-/*	*** t_flags_fill (type flags (struct) fill) ***
+/*
+ *	***** t_flags_fill *****
  *
- *	Parses subsequence and fills t_flags with info.
- *	Takes t_flags struct pointer 'seq_info', address in main string 's' where
- *	the sequence starts 'seq_start', and an integer indicating the length of
- *	the sequence 'seq_len'.
- *	Returns 0 on success and -1 on error.
+ *	DESCRIPTION:
+ *		Parses subsequence and fills t_flags with info.
+ *		Takes t_flags struct pointer 'seq_info', address in main string 's' where
+ *		the sequence starts 'seq_start', and an integer indicating the length of
+ *		the sequence 'seq_len'.
+ *	RETURN:
+ *		Returns 0 on success and -1 on error.
  */
 
 int	t_flags_fill(t_flags *seq_info, const char *seq_start, int seq_len)
