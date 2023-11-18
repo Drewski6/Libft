@@ -6,7 +6,7 @@
 #    By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 14:36:56 by dpentlan          #+#    #+#              #
-#    Updated: 2023/11/18 18:56:32 by dpentlan         ###   ########.fr        #
+#    Updated: 2023/11/18 20:49:00 by dpentlan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -117,6 +117,9 @@ fclean:	clean
 	@rm -f $(NAME) compile_commands.json
 
 re:	fclean all
+
+norm:
+	@watch 'find . \( -name "*.c" -o -name "*.h" \) -not -path "./tmp/*" -exec norminette {} + | grep -v "OK!"'
 
 compile_commands.json: $(COMMANDS) Makefile
 	@echo "[" > compile_commands.json

@@ -6,18 +6,22 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 11:48:08 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/28 11:48:10 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 20:47:23 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*  *** ft_lstdelone (42 list delete one) ***
+/*
+ *	***** ft_lstdelone *****
  *
- *  Takes as a parameter a node and frees the memory of the node's content using
- *  the function 'del' given as a parameter and free the node.
- *  The memory address 'next' is not freed.
- *  Returns nothing.
+ *	DESCRIPTION:
+ *		Takes as a parameter a node and frees the memory of the node's content using
+ *		the function 'del' given as a parameter and free the node.
+ *		The memory address 'next' is not freed.
+ *		Returns nothing.
+ *	RETURN:
+ *		Void function does not return a value.
  */
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))

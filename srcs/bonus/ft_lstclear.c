@@ -6,18 +6,22 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:02:47 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/28 12:02:49 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 20:45:14 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*  *** ft_lstclear (42 list clear) ***
+/*
+ *	***** ft_lstclear *****
  *
- *  Deletes and frees the given node and every successor of the that node,
- *  using the function 'del' and free.
- *  Finally, the pointer to the list is set to NULL.
- *  Returns nothing.
+ *	DESCRIPTION:
+ *		Deletes and frees the given node and every successor of the that node,
+ *		using the function 'del' and free.
+ *		Finally, the pointer to the list is set to NULL.
+ *		Returns nothing.
+ *	RETURN:
+ *		Void function does not return a value.
  */
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))

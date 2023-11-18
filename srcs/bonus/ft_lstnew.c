@@ -6,19 +6,22 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 23:00:36 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/26 23:00:42 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 20:53:15 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*  *** ft_lstnew (42 list new) ***
+/*
+ *	***** ft_lstnew *****
  *
- *  Allocates and returns a new node. The member variable 'content' is
- *  initialized with the value of the parameter 'content'. The variable 'next'
- *  is initialized to NULL.
- *  Returns 0 if allocation unsuccessful.
- *  Returns pointer to new list head if successful.
+ *	DESCRIPTION:
+ *		Allocates and returns a new node. The member variable 'content' is
+ *		initialized with the value of the parameter 'content'. The variable 'next'
+ *		is initialized to NULL.
+ *	RETURN:
+ *		Returns 0 if allocation unsuccessful.
+ *		Returns pointer to new list head if successful.
  */
 
 t_list	*ft_lstnew(void *content)

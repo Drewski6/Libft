@@ -6,19 +6,22 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:03:16 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/28 12:03:17 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 20:51:57 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*  *** ft_lstmap (42 list map) ***
+/*
+ *	***** ft_lstmap *****
  *
- *  Iterates the list 'lst' and applies the function 'f' on the content of
- *  each node. Creates a new list resulting of the successive applications of
- *  the function 'f'. The 'del' function is used to delete the content of the 
- *  node if needed.
- *  Returns a pointer to first element in the new list.
+ *	DESCRIPTION:
+ *		Iterates the list 'lst' and applies the function 'f' on the content of
+ *		each node. Creates a new list resulting of the successive applications of
+ *		the function 'f'. The 'del' function is used to delete the content of the 
+ *		node if needed.
+ *	RETURN:
+ *		Returns a pointer to first element in the new list.
  */
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))

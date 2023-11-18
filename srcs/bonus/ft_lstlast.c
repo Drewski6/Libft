@@ -6,15 +6,19 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 11:15:14 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/28 11:15:21 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 20:51:19 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*  *** ft_lstlast (42 list last) ***
+/*
+ *	***** ft_lstlast *****
  *
- *  Returns the last node of the list.
+ *	DESCRIPTION:
+ *		Returns the last node of the list.
+ *	RETURN:
+ *		Returns a pointer to t_list.
  */
 
 t_list	*ft_lstlast(t_list *lst)
