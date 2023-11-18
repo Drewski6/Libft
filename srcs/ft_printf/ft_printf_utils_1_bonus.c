@@ -6,18 +6,21 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 14:41:16 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 00:09:29 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 21:54:56 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-/*  *** ft_putchar_buf (42 put character to buffer) ***
+/*
+ *	***** ft_putchar_buf *****
  *
- *	Takes a character 'c' and a t_flags struct pointer and prints character
- *	to buffer.
- *	Returns 0 on success and -1 on ERROR.
+ *	DESCRIPTION:
+ *		Takes a character 'c' and a t_flags struct pointer and prints character
+ *		to buffer.
+ *	RETURN:
+ *		Returns 0 on success and -1 on ERROR.
  */
 
 int	ft_putchar_buf(char c, t_flags *seq_info)
@@ -37,11 +40,14 @@ int	ft_putchar_buf(char c, t_flags *seq_info)
 	return (0);
 }
 
-/*  *** ft_putstr_buf (42 put string to buffer) ***
+/*
+ *	***** ft_putstr_buf *****
  *
- *	Takes a string 's' and a t_flags struct pointer and prints character
- *	to buffer.
- *	Returns 0 on success and -1 on ERROR.
+ *	DESCRIPTION:
+ *		Takes a string 's' and a t_flags struct pointer and prints character
+ *		to buffer.
+ *	RETURN:
+ *		Returns 0 on success and -1 on ERROR.
  */
 
 int	ft_putstr_buf(char *s, t_flags *seq_info)
@@ -61,11 +67,14 @@ int	ft_putstr_buf(char *s, t_flags *seq_info)
 	return (0);
 }
 
-/*	*** ft_putnbr_buf_helper (42 put number to buffer helper) ***
+/*
+ *	***** ft_putnbr_buf_helper *****
  *
- *	Helper function to reduce size of ft_putnbr_buf.
- *	Takes long nbl and t_flags struct pointer.
- *	Returns 0 on success or -1 on ERROR.
+ *	DESCRIPTION:
+ *		Helper function to reduce size of ft_putnbr_buf.
+ *		Takes long nbl and t_flags struct pointer.
+ *	RETURN:
+ *		Returns 0 on success or -1 on ERROR.
  */
 
 int	ft_putnbr_buf_helper(long nbl, t_flags *seq_info)
@@ -83,14 +92,17 @@ int	ft_putnbr_buf_helper(long nbl, t_flags *seq_info)
 	return (0);
 }
 
-/*  *** ft_putnbr_buf (42 put number buffer) ***
+/*
+ *	***** ft_putnbr_buf *****
  *
- *	Recursive function that takes an integer 'n' and t_flags struct pointer
- *	and prints a string representation to a buffer.
- *	Uses a helper function ft_putnbr_buf_helper to reduce function size for 
- *	42 function requirements.
- *	Takes an integer 'n' and t_flags struct pointer.
- *	Returns 0 on success or -1 on ERROR.
+ *	DESCRIPTION:
+ *		Recursive function that takes an integer 'n' and t_flags struct pointer
+ *		and prints a string representation to a buffer.
+ *		Uses a helper function ft_putnbr_buf_helper to reduce function size for 
+ *		42 function requirements.
+ *		Takes an integer 'n' and t_flags struct pointer.
+ *	RETURN:
+ *		Returns 0 on success or -1 on ERROR.
  */
 
 int	ft_putnbr_buf(int n, t_flags *seq_info)

@@ -6,19 +6,22 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 14:41:27 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 00:08:38 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 22:00:07 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-/*	*** ft_dec_to_hex_upper_buf (42 decimal to hexidecimal uppercase buf) ***
+/*
+ *	***** ft_dec_to_hex_upper_buf *****
  *
- *	Recursive function that takes an unsigned int 'n' and t_flags 
- *	struct pointer and prints a string representation to a buffer using
- *	upper case letters.
- *	Takes an unsigned int 'n' and t_flags struct pointer.
- *	Returns 0 on success or -1 on ERROR.
+ *	DESCRIPTION:
+ *		Recursive function that takes an unsigned int 'n' and t_flags 
+ *		struct pointer and prints a string representation to a buffer using
+ *		upper case letters.
+ *		Takes an unsigned int 'n' and t_flags struct pointer.
+ *	RETURN:
+ *		Returns 0 on success or -1 on ERROR.
  */
 
 int	ft_dec_to_hex_upper_buf(unsigned int n, t_flags *seq_info)
@@ -41,13 +44,16 @@ int	ft_dec_to_hex_upper_buf(unsigned int n, t_flags *seq_info)
 	return (0);
 }
 
-/*	*** ft_dec_to_hex_lower_buf (42 decimal to hexidecimal lowercase buf) ***
+/*
+ *	***** ft_dec_to_hex_lower_buf *****
  *
- *	Recursive function that takes an unsigned int 'n' and t_flags 
- *	struct pointer and prints a string representation to a buffer using
- *	lower case letters.
- *	Takes an unsigned int 'n' and t_flags struct pointer.
- *	Returns 0 on success or -1 on ERROR.
+ *	DESCRIPTION:
+ *		Recursive function that takes an unsigned int 'n' and t_flags 
+ *		struct pointer and prints a string representation to a buffer using
+ *		lower case letters.
+ *		Takes an unsigned int 'n' and t_flags struct pointer.
+ *	RETURN:
+ *		Returns 0 on success or -1 on ERROR.
  */
 
 int	ft_dec_to_hex_lower_buf(unsigned int n, t_flags *seq_info)
@@ -70,12 +76,15 @@ int	ft_dec_to_hex_lower_buf(unsigned int n, t_flags *seq_info)
 	return (0);
 }
 
-/*	*** ft_p_to_hex_buf (42 pointer to hexidecimal to buffer) ***
+/*
+ *	***** ft_p_to_hex_buf *****
  *
- *	Recursive function that takes a void pointer 'p' and t_flags 
- *	struct pointer and prints a string representation to a buffer.
- *	Takes a void pointer 'p' and t_flags struct pointer.
- *	Returns 0 on success or -1 on ERROR.
+ *	DESCRIPTION:
+ *		Recursive function that takes a void pointer 'p' and t_flags 
+ *		struct pointer and prints a string representation to a buffer.
+ *		Takes a void pointer 'p' and t_flags struct pointer.
+ *	RETURN:
+ *		Returns 0 on success or -1 on ERROR.
  */
 
 int	ft_p_to_hex_buf(void *p, t_flags *seq_info)
@@ -98,12 +107,15 @@ int	ft_p_to_hex_buf(void *p, t_flags *seq_info)
 	return (0);
 }
 
-/*	*** ft_putunbr_buf (42 put unsigned number to buffer) ***
+/*
+ *	***** ft_putunbr_buf *****
  *
- *	Recursive function that takes an unsigned integer 'n' and t_flags 
- *	struct pointer and prints a string representation to a buffer.
- *	Takes an unsigned integer 'n' and t_flags struct pointer.
- *	Returns 0 on success or -1 on ERROR.
+ *	DESCRIPTION:
+ *		Recursive function that takes an unsigned integer 'n' and t_flags 
+ *		struct pointer and prints a string representation to a buffer.
+ *		Takes an unsigned integer 'n' and t_flags struct pointer.
+ *	RETURN:
+ *		Returns 0 on success or -1 on ERROR.
  */
 
 int	ft_putunbr_buf(unsigned int n, t_flags *seq_info)
