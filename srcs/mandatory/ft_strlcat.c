@@ -6,19 +6,22 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 12:58:53 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/11 12:59:00 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:35:34 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*  *** ft_strlcat (42 size-bounded string concatination) ***
+/*
+ *	***** ft_strlcat *****
  *
- *  Takes destination pointer 'dest', source string 'src', and size_t 'size'.
- *  Concatenates string 'src' to the end of 'dest' by first seeking the first
- *  Null terminator at the end of 'dest' and copying 'size' number of bytes
- *  from 'src' to the end of 'dest'.
- *  Returns number of bytes coppied.
+ *	DESCRIPTION:
+ *		Takes destination pointer 'dest', source string 'src', and size_t 'size'.
+ *		Concatenates string 'src' to the end of 'dest' by first seeking the first
+ *		Null terminator at the end of 'dest' and copying 'size' number of bytes
+ *		from 'src' to the end of 'dest'.
+ *	RETURN:
+ *		Returns number of bytes coppied.
  */
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)

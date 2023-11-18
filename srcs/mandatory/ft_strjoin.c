@@ -6,17 +6,21 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 15:16:23 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/17 15:16:34 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:35:07 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-/*  *** ft_strjoin (42 string join) ***
+/*
+ *	***** ft_strjoin *****
  *
- *  Takes two strings 's1' and 's2'.
- *  Returns a newly allocated memory space containing copies of 's1' memory
- *  space followed by 's2' memory space.
+ *	DESCRIPTION:
+ *		Takes two strings 's1' and 's2'.
+ *	RETURN:
+ *		Returns a newly allocated memory space containing copies of 's1' memory
+ *		space followed by 's2' memory space.
  */
 
 char	*ft_strjoin(char const *s1, char const *s2)

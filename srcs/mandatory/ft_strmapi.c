@@ -6,19 +6,22 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:41:51 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/26 12:41:54 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:36:55 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*  *** ft_strmapi (42 string map by index) ***
+/*
+ *	***** ft_strmapi *****
  *
- *  Applies function f to each character of the string 's', and passing its 
- *  index as the first argument to create a newly allocated string, resulting
- *  from successive applications of 'f'.
- *  Returns newly allocated string.
- *  Returns 0 if ft_strdup fails or either argument is null.
+ *	DESCRIPTION:
+ *		Applies function f to each character of the string 's', and passing its 
+ *		index as the first argument to create a newly allocated string, resulting
+ *		from successive applications of 'f'.
+ *	RETURN:
+ *		Returns newly allocated string.
+ *		Returns 0 if ft_strdup fails or either argument is null.
  */
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

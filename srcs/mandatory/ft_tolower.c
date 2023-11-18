@@ -6,16 +6,19 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 13:57:33 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/11 13:57:37 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:40:37 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*  *** ft_tolower (42 to lowercase) ***
+/*
+ *	***** ft_tolower *****
  *
- *  Takes an ascii character 'c'.
- *  Returns corresponding character in lowercase.
+ *	DESCRIPTION:
+ *		Takes an ascii character 'c'.
+ *	RETURN:
+ *		Returns corresponding character in lowercase.
  */
 
 int	ft_tolower(int c)

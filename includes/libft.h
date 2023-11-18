@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:31:39 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 19:15:10 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:06:23 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,7 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdlib.h>
 # include <stddef.h>
-# include <string.h>
-# include <bsd/string.h>
-# include <stdbool.h>
-# include <assert.h>
-# include <unistd.h>
-# include <ctype.h>
-# include <stdint.h>
-# include <assert.h>
-# include <sys/types.h>
-# include <stdio.h>
-# include <sys/stat.h>
-# include <fcntl.h>
 
 //***** typedefs/structs *****//
 

@@ -6,12 +6,13 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:02:57 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 22:22:41 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:01:08 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
+#include <stdlib.h>
 
 /*
  *	***** t_flags_init *****

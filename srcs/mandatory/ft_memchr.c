@@ -6,18 +6,21 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 10:58:12 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/14 10:58:16 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:22:22 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-/*  *** ft_memchr (42 memory character) ***
+/*
+ *	***** ft_memchr *****
  *
- *  Takes a pointer 's', an integer 'c' and size_t 'n'.
- *  Checks 'n' number of bytes for character 'c'.
- *  Returns address of first found byte that matches 'c'.
- *  If none is found, returns 0.
+ *	DESCRIPTION:
+ *		Takes a pointer 's', an integer 'c' and size_t 'n'.
+ *		Checks 'n' number of bytes for character 'c'.
+ *	RETURN:
+ *		Returns address of first found byte that matches 'c'.
+ *		If none is found, returns 0.
  */
 
 void	*ft_memchr(const void *s, int c, size_t n)

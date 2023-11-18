@@ -6,16 +6,19 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 19:26:08 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/25 19:26:13 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:21:30 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*  *** ft_count (count) ***
+/*
+ *	***** ft_count *****
  *
- *  Takes integer 'n'.
- *  Returns the number of bytes needed to represent integer 'n' as a string.
+ *	DESCRIPTION:
+ *		Takes integer 'n'.
+ *	RETURN:
+ *		Returns the number of bytes needed to represent integer 'n' as a string.
  */
 
 static int	ft_count(int n)
@@ -38,11 +41,14 @@ static int	ft_count(int n)
 	return (n_size);
 }
 
-/*  *** ft_itoa (42 integer to ascii) ***
+/*
+ *	***** ft_itoa *****
  *
- *  Takes an integer 'n'.
- *  Returns a newly allocated memory space containing a string 
- *  representation of int 'n'.
+ *	DESCRIPTION:
+ *		Takes an integer 'n'.
+ *	RETURN:
+ *		Returns a newly allocated memory space containing a string 
+ *		representation of int 'n'.
  */
 
 char	*ft_itoa(int n)
