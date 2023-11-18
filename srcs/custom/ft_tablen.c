@@ -6,20 +6,20 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 17:24:18 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 17:26:28 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 21:39:37 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**	NAME
-		ft_tablen
-**	DESCRIPTION
-		Finds the length of a char ** table.
-**	RETURN
-		Returns the size as a size_t of the table.
-*/
+ *	***** ft_tablen *****
+ *
+ *	DESCRIPTION:
+ *		Finds the length of a char ** table.
+ *	RETURN:
+ *		Returns the size as a size_t of the table.
+ */
 
 size_t	ft_tablen(char **tab)
 {

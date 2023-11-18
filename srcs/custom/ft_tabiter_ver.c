@@ -6,24 +6,24 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 17:44:04 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 18:09:54 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 21:40:22 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**	NAME
-**		ft_tabiter_ver
-**	DESCRIPTION
-**		Iterates over a table and uses function f to determine something about
-**			The contents of the table.
-**		For use with ft_striter_ver. 
-**		Like this you can use ft_isalpha and iterate over each string in a table
-**			to verify all the characters are alphabet characters.
-**	RETURN
-**		Bool function returns 0 on success and 1 on error.
-*/
+ *	***** ft_tabiter_ver *****
+ *
+ *	DESCRIPTION:
+ *		Iterates over a table and uses function f to determine something about
+ *			The contents of the table.
+ *		For use with ft_striter_ver. 
+ *		Like this you can use ft_isalpha and iterate over each string in a table
+ *			to verify all the characters are alphabet characters.
+ *	RETURN:
+ *		Bool function returns 0 on success and 1 on error.
+ */
 
 int	ft_tabiter_ver(char **tab, int (*f)(char *, int(*)(int)), int (*c)(int))
 {
