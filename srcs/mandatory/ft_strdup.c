@@ -6,11 +6,12 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 13:22:54 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/17 13:23:34 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:04:51 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 /*  *** ft_strdup (42 string duplicate) ***
  *

@@ -6,11 +6,12 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 20:06:00 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/19 20:06:02 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:04:36 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 /*  *** count_words (count words) ***
  *

@@ -6,15 +6,14 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 18:32:59 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 00:06:16 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:00:08 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# include <unistd.h>
-# include <stdarg.h>
 # include <stddef.h>
+# include <stdarg.h>
 
 /*	*** t_flags (struct) ***
  *

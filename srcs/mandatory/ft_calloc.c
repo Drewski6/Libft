@@ -6,11 +6,13 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 10:57:36 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 22:37:20 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:02:54 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <stdint.h>
 
 /*
  *	***** ft_calloc *****

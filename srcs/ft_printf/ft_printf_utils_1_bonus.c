@@ -6,12 +6,13 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 14:41:16 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 21:54:56 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 22:57:14 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
+#include <stdlib.h>
 
 /*
  *	***** ft_putchar_buf *****

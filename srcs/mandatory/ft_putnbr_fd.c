@@ -6,11 +6,12 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 13:53:54 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/26 13:53:56 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:04:05 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 /*  *** ft_putnbr_fd (42 put number file descriptor) ***
  *
