@@ -1,0 +1,20 @@
+name: Build
+
+on: [pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install libbsd-dev
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libbsd-dev
+
+      - name: Make libft
+        run: make
