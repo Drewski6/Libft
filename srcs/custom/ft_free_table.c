@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 13:49:36 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 19:10:11 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 19:12:52 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 /*
  *	NAME
- *		ft_table_free
+ *		ft_free_table
  *	DESCRIPTION
  *		Frees a table pointed to by char **table.
  *	RETURN
  *		Void function does not return a value.
  */
 
-void	ft_table_free(char **table)
+void	ft_free_table(char **table)
 {
 	int	i;
 
