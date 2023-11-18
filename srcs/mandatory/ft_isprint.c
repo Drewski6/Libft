@@ -6,17 +6,20 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 12:57:41 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/11 12:57:45 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:20:30 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*  *** ft_isprint (42 is printable) ***
+/*
+ *	***** ft_isprint *****
  *
- *  Takes an integer value for ascii character.
- *  returns 1 if the character is a printable character.
- *  returns 0 if the character is not a printable character.
+ *	DESCRIPTION:
+ *		Takes an integer value for ascii character.
+ *	RETURN:
+ *		Returns 1 if the character is a printable character.
+ *		Returns 0 if the character is not a printable character.
  */
 
 int	ft_isprint(int c)

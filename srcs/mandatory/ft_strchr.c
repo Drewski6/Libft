@@ -6,16 +6,19 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:07:07 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/11 15:07:10 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:33:40 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*  *** ft_strchr (42 string character) ***
+/*
+ *	***** ft_strchr *****
  *
- *  Takes a string pointer 's' and a character 'c'.
- *  Returns the address of the first instance of character 'c'.
+ *	DESCRIPTION:
+ *		Takes a string pointer 's' and a character 'c'.
+ *	RETURN:
+ *		Returns the address of the first instance of character 'c'.
  */
 
 char	*ft_strchr(const char *s, int c)

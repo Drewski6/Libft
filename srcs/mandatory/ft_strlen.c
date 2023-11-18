@@ -6,17 +6,20 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 12:59:37 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/11 12:59:45 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:36:29 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*  *** ft_strlen (42 string length) ***
+/*
+ *	***** ft_strlen *****
  *
- *  Takes a character pointer.
- *  Returns size_t number of 8 bit memory spaces between input pointer and
- *  the first null terminator.
+ *	DESCRIPTION:
+ *		Takes a character pointer.
+ *	RETURN:
+ *		Returns size_t number of 8 bit memory spaces between input pointer and
+ *		the first null terminator.
  */
 
 size_t	ft_strlen(const char *str)

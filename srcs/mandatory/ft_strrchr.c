@@ -6,16 +6,19 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 17:18:16 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/11 17:18:18 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:38:18 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*  *** ft_strrchr (42 string reverse character)
+/*
+ *	***** ft_strrchr *****
  *
- *  Takes a string 's' and a character 'c'.
- *  Returns the address of the last instance of character 'c' in string 's'.
+ *	DESCRIPTION:
+ *		Takes a string 's' and a character 'c'.
+ *	RETURN:
+ *		Returns the address of the last instance of character 'c' in string 's'.
  */
 
 char	*ft_strrchr(const char *s, int c)

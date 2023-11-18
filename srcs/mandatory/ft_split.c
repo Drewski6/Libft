@@ -6,18 +6,21 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 20:06:00 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 23:04:36 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:33:02 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-/*  *** count_words (count words) ***
+/*
+ *	***** count_words *****
  *
- *  Takes a string 's' and a character 'c'.
- *  Returns the number of strings that would result from splitting string 's'
- *  every time character 'c' is encountered.
+ *	DESCRIPTION:
+ *		Takes a string 's' and a character 'c'.
+ *	RETURN:
+ *		Returns the number of strings that would result from splitting string 's'
+ *		every time character 'c' is encountered.
  */
 
 static int	count_words(char *s, char c)
@@ -38,12 +41,15 @@ static int	count_words(char *s, char c)
 	return (word_count);
 }
 
-/*  *** empty_table (empty table) ***
+/*
+ *	***** empty_table *****
  *
- *  Takes an address to a table of strings (pointer to pointer to pointer).
- *  Each element in 'split_table' (each element is a string) is freed.
- *  Finally the memory space for 'split_table' is reset to 0 with ft_bzero.
- *  Returns nothing.
+ *	DESCRIPTION:
+ *		Takes an address to a table of strings (pointer to pointer to pointer).
+ *		Each element in 'split_table' (each element is a string) is freed.
+ *		Finally the memory space for 'split_table' is reset to 0 with ft_bzero.
+ *	RETURN:
+ *		Void function does not return a value.
  */
 
 static void	empty_table(char ***split_table)
@@ -61,15 +67,18 @@ static void	empty_table(char ***split_table)
 	*split_table = 0;
 }
 
-/*  *** add_word (add word) ***
+/*
+ *	***** add_word *****
  *
- *  Takes a table of strings (pointer to pointer), a word to add to
- *  the table 'str' and size_t 'len'.
- *  Seeks for the first empty element in the string table, then assigns
- *  that table element to adds a newly allocated memory space (via substr)
- *  which contains 'str' of size 'len'.
- *  Returns number of bytes copied on success.
- *  Returns 0 if malloc fails.
+ *	DESCRIPTION:
+ *		Takes a table of strings (pointer to pointer), a word to add to
+ *		the table 'str' and size_t 'len'.
+ *		Seeks for the first empty element in the string table, then assigns
+ *		that table element to adds a newly allocated memory space (via substr)
+ *		which contains 'str' of size 'len'.
+ *	RETURN:
+ *		Returns number of bytes copied on success.
+ *		Returns 0 if malloc fails.
  */
 
 static int	add_word(char **split_table, char *src, size_t len)
@@ -88,13 +97,16 @@ static int	add_word(char **split_table, char *src, size_t len)
 	return (len);
 }
 
-/*  *** fill_table (fill table) ***
+/*
+ *	***** fill_table *****
  *
- *  Takes a table of strings 'split_table', a string 's', and a character 'c'.
- *  Iterates over string 's' looking for character separator 'c', when one
- *  is found, that word is coppied (via add_word) to the 'split_table'.
- *  Returns a table of individually malloced strings.
- *  Returns 0 if error with memory allocation.
+ *	DESCRIPTION:
+ *		Takes a table of strings 'split_table', a string 's', and a character 'c'.
+ *		Iterates over string 's' looking for character separator 'c', when one
+ *		is found, that word is coppied (via add_word) to the 'split_table'.
+ *	RETURN:
+ *		Returns a table of individually malloced strings.
+ *		Returns 0 if error with memory allocation.
  */
 
 static char	**fill_table(char **split_table, char *s, char c)
@@ -123,12 +135,15 @@ static char	**fill_table(char **split_table, char *s, char c)
 	return (split_table);
 }
 
-/*  *** ft_split (42 split) ***
+/*
+ *	***** ft_split *****
  *
- *  Takes a string 's' and a character 'c'.
- *  Returns a table of pointers that point to strings derived from splitting
- *  string 's' into smaller strings every time a character 'c' is found.
- *  Returns 0 if memory allocations fail or 's' is null.
+ *	DESCRIPTION:
+ *		Takes a string 's' and a character 'c'.
+ *		Returns a table of pointers that point to strings derived from splitting
+ *		string 's' into smaller strings every time a character 'c' is found.
+ *	RETURN:
+ *		Returns 0 if memory allocations fail or 's' is null.
  */
 
 char	**ft_split(char const *s, char c)

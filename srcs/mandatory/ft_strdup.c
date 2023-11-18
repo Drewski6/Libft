@@ -6,19 +6,22 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 13:22:54 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 23:04:51 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 23:34:10 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-/*  *** ft_strdup (42 string duplicate) ***
+/*
+ *	***** ft_strdup *****
  *
- *  Takes a string 'src'.
- *  Returns a newly allocated memory space which contains a duplicate of 
- *  memory space 'src'.
- *  Returns 0 if malloc fails.
+ *	DESCRIPTION:
+ *		Takes a string 'src'.
+ *	RETURN:
+ *		Returns a newly allocated memory space which contains a duplicate of 
+ *		memory space 'src'.
+ *		Returns 0 if malloc fails.
  */
 
 char	*ft_strdup(const char *src)
