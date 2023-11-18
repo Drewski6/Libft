@@ -6,17 +6,20 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 10:15:41 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/11/16 10:15:42 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 22:36:00 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*  *** int_build (integer build) ***
+/*
+ *	***** int_build *****
  *
- *  Takes a string of ascii numerical characters and builds an integer
- *  of the same value.
- *  Returns integer representation of input string.
+ *	DESCRIPTION:
+ *		Takes a string of ascii numerical characters and builds an integer
+ *		of the same value.
+ *	RETURN:
+ *		Returns integer representation of input string.
  */
 
 static int	int_build(char *str)
@@ -34,10 +37,13 @@ static int	int_build(char *str)
 	return (ret_int);
 }
 
-/*  *** ft_atoi (42 ascii to integer) ***
+/*
+ *	***** ft_atoi *****
  *
- *  Takes a string with ascii numbers, spaces or a single '+' or '-' sign.
- *  Returns a signed integer representation of of the string entered.
+ *	DESCRIPTION:
+ *		Takes a string with ascii numbers, spaces or a single '+' or '-' sign.
+ *	RETURN:
+ *		Returns a signed integer representation of of the string entered.
  */
 
 int	ft_atoi(const char *nptr)

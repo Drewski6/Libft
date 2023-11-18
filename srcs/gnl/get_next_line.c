@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 23:53:40 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 14:41:34 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/18 22:33:58 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,18 @@ static int	ft_strjoin_overflow(char **previous, char *buffer)
 	*previous = str;
 	return (next_is_newline);
 }
+
+/*
+ *	***** get_next_line *****
+ *
+ *	DESCRIPTION:
+ *		Takes an open file descrptor fd and returns the next line from it.
+ *		Next line is from the bigging of a line until the next newline character.
+ *	RETURN:
+ *		Returns a pointer to a newly malloced string.
+ *		Returns NULL is EOF is reached.
+ *		Returns NULL on malloc error (check errno).
+ */
 
 char	*get_next_line(int fd)
 {
