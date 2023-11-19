@@ -6,7 +6,7 @@
 #    By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 14:36:56 by dpentlan          #+#    #+#              #
-#    Updated: 2023/11/19 21:31:06 by dpentlan         ###   ########.fr        #
+#    Updated: 2023/11/19 21:44:37 by dpentlan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,7 @@ SRCS =				mandatory/ft_isalpha.c \
 					ft_printf/ft_printf_utils_t_flags_bonus.c \
 					ft_printf/ft_printf_utils_use_flags_bonus.c \
 					custom/ft_lst/ft_lst_free_link.c \
+					custom/ft_lst/ft_lst_print_link.c \
 					custom/ft_print_table.c \
 					custom/ft_free_table.c \
 					custom/ft_newline_to_null.c \
