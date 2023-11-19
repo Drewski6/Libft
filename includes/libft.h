@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:31:39 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 23:06:23 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/19 21:31:53 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,13 +77,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 //***** libft custom *****//
 
-void	ft_print_table(char **table, int flag);
+void	ft_lst_free_link(void *content);
 void	ft_free_table(char **table);
 void	ft_newline_to_null(unsigned int i, char *ch_addr);
+void	ft_print_table(char **table, int flag);
+int		ft_striter_ver(char *str, int (*f)(int));
+char	*ft_strset(char *str, char *set);
 size_t	ft_tablen(char **tab);
 int		ft_tabiter_ver(char **tab,
 			int (*f)(char *, int(*)(int)), int (*c)(int));
-int		ft_striter_ver(char *str, int (*f)(int));
-char	*ft_strset(char *str, char *set);
 
 #endif
