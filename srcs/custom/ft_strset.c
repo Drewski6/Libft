@@ -6,11 +6,9 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 18:39:31 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 21:38:34 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/19 12:38:26 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*
  *	***** ft_strset *****
@@ -21,7 +19,7 @@
  *		If a character is found that is not in the set, its address is returned.
  *	RETURN:
  *		Returns an address to the first charcter that is not in the set,
- *		or NULL if all characters are in the set.
+ *		or 0 if all characters are in the set.
  */
 
 char	*ft_strset(char *str, char *set)
@@ -43,5 +41,5 @@ char	*ft_strset(char *str, char *set)
 			return (&str[i]);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }

@@ -6,11 +6,12 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 17:20:47 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 23:39:22 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/19 12:29:08 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 /*
  *	***** ft_in_charset *****

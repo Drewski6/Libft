@@ -6,11 +6,11 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:58:30 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 23:23:17 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/19 12:25:48 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 /*
  *	***** ft_memcmp *****
