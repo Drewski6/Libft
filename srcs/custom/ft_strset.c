@@ -6,11 +6,9 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 18:39:31 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 21:38:34 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/19 12:32:44 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*
  *	***** ft_strset *****
@@ -43,5 +41,5 @@ char	*ft_strset(char *str, char *set)
 			return (&str[i]);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
