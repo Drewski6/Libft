@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:31:39 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/19 23:14:46 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/20 18:15:33 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ void	ft_lst_print_link(void *content);
 void	ft_lst_print_link_nl(void *content);
 size_t	ft_lst_largest(t_list **lst, size_t (*s)());
 size_t	ft_lst_strlen(void *content);
+int		ft_lst_iter_ver(t_list *lst, int (*f)(char *, int(*)(int)), int (*c)(int));
 void	ft_free_table(char **table);
 void	ft_newline_to_null(unsigned int i, char *ch_addr);
 void	ft_print_table(char **table, int flag);
