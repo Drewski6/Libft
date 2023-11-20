@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:31:39 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/20 18:29:50 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/20 21:57:38 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,6 @@ char	*ft_strset(char *str, char *set);
 size_t	ft_tablen(char **tab);
 int		ft_tabiter_ver(char **tab,
 			int (*f)(char *, int(*)(int)), int (*c)(int));
+int		ft_isinset(int c, char *set);
 
 #endif
