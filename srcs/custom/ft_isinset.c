@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 21:53:44 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/20 21:57:44 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/20 22:07:55 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	ft_isinset(int c, char *set)
 	{
 		if (set[i] == (char)c)
 			return (1);
+		i++;
 	}
 	return (0);
 }
