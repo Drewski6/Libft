@@ -6,27 +6,21 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 17:20:37 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/21 18:10:40 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:13:28 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-unsigned long long	ft_power(unsigned long long num, unsigned long long exp)
-{
-	unsigned long long	i;
-	unsigned long long	num_2;
-
-	i = 0;
-	num_2 = num;
-	while (i < exp)
-	{
-		num = num * num_2;
-		i++;
-	}
-	return (num);
-}
+/*
+ *	***** ft_num_to_bin *****
+ *
+ *	DESCRIPTION:
+ *		Takes a number as an unsigned int and a number of binary places to print
+ *		and then prints the binary representation of the number to stdout.
+ *	RETURN:
+ *		Void function does not return a value.
+ */
 
 void	ft_num_to_bin(unsigned int num, int places)
 {
