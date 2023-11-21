@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 17:20:37 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/21 18:02:34 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:10:40 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,5 @@ void	ft_num_to_bin(unsigned int num, int places)
 		c = c << 1;
 		i++;
 	}
+	ft_putchar_fd('\n', 1);
 }
