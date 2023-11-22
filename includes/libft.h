@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:31:39 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/21 18:18:52 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/22 09:05:46 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ size_t		ft_tablen(char **tab);
 int			ft_tabiter_ver(char **tab,
 				int (*f)(char *, int(*)(int)), int (*c)(int));
 int			ft_isinset(int c, char *set);
-void		ft_num_to_bin(unsigned int num, int places);
+char		*ft_num_to_bin(unsigned int num, int places);
 uint64_t	ft_power(unsigned long long num, unsigned long long exp);
 
 #endif
