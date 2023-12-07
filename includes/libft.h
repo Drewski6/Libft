@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:31:39 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/18 23:06:23 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/12/07 16:23:28 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,6 @@ int		ft_tabiter_ver(char **tab,
 			int (*f)(char *, int(*)(int)), int (*c)(int));
 int		ft_striter_ver(char *str, int (*f)(int));
 char	*ft_strset(char *str, char *set);
+int		ft_strchr_count(const char *s, const int c);
 
 #endif
