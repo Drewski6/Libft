@@ -6,9 +6,11 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 18:39:31 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/11/19 12:38:26 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:11:02 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 /*
  *	***** ft_strset *****
@@ -28,6 +30,8 @@ char	*ft_strset(char *str, char *set)
 	int	j;
 
 	i = 0;
+	if (!str)
+		return (NULL);
 	while (str[i])
 	{
 		j = 0;
@@ -41,5 +45,5 @@ char	*ft_strset(char *str, char *set)
 			return (&str[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
