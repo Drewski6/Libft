@@ -84,6 +84,7 @@ SRCS =				mandatory/ft_isalpha.c \
 					custom/ft_isinset.c \
 					custom/ft_int_to_bin.c \
 					custom/ft_power.c \
+					custom/ft_strchr_count.c \
 
 SRCS_DIR = srcs/
 

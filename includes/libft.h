@@ -96,5 +96,14 @@ int			ft_tabiter_ver(char **tab,
 int			ft_isinset(int c, char *set);
 char		*ft_num_to_bin(unsigned int num, int places);
 uint64_t	ft_power(unsigned long long num, unsigned long long exp);
+void	  ft_print_table(char **table, int flag);
+void	  ft_free_table(char **table);
+void	  ft_newline_to_null(unsigned int i, char *ch_addr);
+size_t	ft_tablen(char **tab);
+int		  ft_tabiter_ver(char **tab,
+			  int (*f)(char *, int(*)(int)), int (*c)(int));
+int		  ft_striter_ver(char *str, int (*f)(int));
+char	  *ft_strset(char *str, char *set);
+int		  ft_strchr_count(const char *s, const int c);
 
 #endif
